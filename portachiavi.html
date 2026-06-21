@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Catalogo portachiavi Dicette Mammà: frasi napoletane, nomi, coppie e dediche personalizzate stampate in 3D."
+    >
+    <title>Portachiavi | Dicette Mammà</title>
+
+    <!-- Google Analytics 4. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV1SM1ZGT9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XV1SM1ZGT9");
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="Vai alla Home di Dicette Mammà">
+        <img class="site-logo header-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
+        <span class="sr-only">Apri menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+            <nav class="nav-menu" id="site-menu" aria-label="Menu principale">
+        <a href="index.html#home">Home</a>
+        <a class="is-active" href="portachiavi.html">Portachiavi</a>
+        <a href="index.html#storia">Storia</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contatti">Contatti</a>
+        <a class="nav-cta" href="portachiavi.html">Ordina ora</a>
+      </nav>
+    </header>
+
+    <main class="catalog-main">
+      <section class="catalog-hero section reveal">
+        <div class="catalog-hero-copy">
+          <span class="eyebrow">Catalogo portachiavi</span>
+          <h1>O' Mercatino</h1>
+          <p>
+            Tutti i portachiavi in stile Dicette Mammà: scegli il tuo modello preferito, scegli il colore ed ordina su Whatsapp.
+          </p>
+        </div>
+        <div class="catalog-hero-panel">
+          <strong>Ordini veloci via WhatsApp</strong>
+          <span>Stampa 3D</span>
+          <span>Colori personalizzati</span>
+          <span>Idea regalo</span>
+        </div>
+      </section>
+
+      <section class="section catalog-shop reveal" aria-labelledby="catalog-title">
+        <div class="section-heading split">
+          <div>
+            <span class="eyebrow">Tutti i portachiavi</span>
+            <h2 id="catalog-title">Scegli il tuo preferito.</h2>
+          </div>
+          <a class="button button-primary" href="#productCatalog">Scegli un portachiavi</a>
+        </div>
+
+        <div class="catalog-toolbar" aria-label="Filtri catalogo">
+          <div class="field catalog-search-field">
+            <label for="catalogSearch">Cerca</label>
+            <input id="catalogSearch" type="search" placeholder="Frase, nome, coppia...">
+          </div>
+          <div class="field">
+            <label for="catalogSort">Ordina</label>
+            <select id="catalogSort">
+              <option value="featured">Consigliati</option>
+              <option value="price-asc">Prezzo crescente</option>
+              <option value="price-desc">Prezzo decrescente</option>
+              <option value="name-asc">Nome A-Z</option>
+            </select>
+          </div>
+          <div class="filter-chips" role="group" aria-label="Categorie portachiavi">
+            <button class="filter-chip is-active" type="button" data-filter="all">Tutti</button>
+            <button class="filter-chip" type="button" data-filter="frasi">Frasi</button>
+          </div>
+        </div>
+
+        <p class="catalog-count" id="catalogCount" aria-live="polite">10 portachiavi disponibili</p>
+
+        <div class="product-grid catalog-grid" id="productCatalog">
+          <article class="product-card" data-product="Portachiave &quot;Nun t'fidà e nisciun&quot;" data-category="frasi" data-price="4.90" data-slug="nun-t-fida-e-nisciun">
+            <span class="product-badge">#1</span>
+            <img class="product-photo" src="prodotti/1.png" alt="Portachiave &quot;Nun t'fidà e nisciun&quot;">
+            <div class="product-info">
+              <h3>Portachiave "Nun t'fidà e nisciun"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=nun-t-fida-e-nisciun" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;San Gennà, m'arraccumann&quot;" data-category="frasi" data-price="4.90" data-slug="san-genna-m-arraccumann">
+            <span class="product-badge badge-blue">#2</span>
+            <img class="product-photo" src="prodotti/2.png" alt="Portachiave &quot;San Gennà, m'arraccumann&quot;">
+            <div class="product-info">
+              <h3>Portachiave "San Gennà, m'arraccumann"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=san-genna-m-arraccumann" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;Nun si buon manc sott'uoglio&quot;" data-category="frasi" data-price="4.90" data-slug="nun-si-buon-manc-sott-uoglio">
+            <span class="product-badge badge-mint">#3</span>
+            <img class="product-photo" src="prodotti/3.png" alt="Portachiave &quot;Nun si buon manc sott'uoglio&quot;">
+            <div class="product-info">
+              <h3>Portachiave "Nun si buon manc sott'uoglio"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=nun-si-buon-manc-sott-uoglio" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;Sit buttun ca n'apponten..&quot;" data-category="frasi" data-price="4.90" data-slug="citazione-4">
+            <span class="product-badge badge-yellow">#4</span>
+            <img class="product-photo" src="prodotti/4.png" alt="Portachiave &quot;Sit buttun ca n'apponten..&quot;">
+            <div class="product-info">
+              <h3>Portachiave "Sit buttun ca n'apponten.."</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=citazione-4" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;Veritevenn bene cà se more&quot;" data-category="frasi" data-price="4.90" data-slug="citazione-5">
+            <span class="product-badge badge-mint">#5</span>
+            <img class="product-photo" src="prodotti/5.png" alt="Portachiave &quot;Veritevenn bene cà se more&quot;">
+            <div class="product-info">
+              <h3>Portachiave "Veritevenn bene cà se more"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=citazione-5" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;A'luntan m'parit tutta brava ggent&quot;" data-category="frasi" data-price="4.90" data-slug="citazione-6">
+            <span class="product-badge">#6</span>
+            <img class="product-photo" src="prodotti/6.png" alt="Portachiave &quot;A'luntan m'parit tutta brava ggent&quot;">
+            <div class="product-info">
+              <h3>Portachiave "A'luntan m'parit tutta brava ggent"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=citazione-6" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;Nun sai tenè tre cicere mmocca&quot;" data-category="frasi" data-price="4.90" data-slug="citazione-7">
+            <span class="product-badge badge-blue">#7</span>
+            <img class="product-photo" src="prodotti/7.png" alt="Portachiave &quot;Nun sai tenè tre cicere mmocca&quot;">
+            <div class="product-info">
+              <h3>Portachiave "Nun sai tenè tre cicere mmocca"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=citazione-7" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;'A femmena bella nasce maretata&quot;" data-category="frasi" data-price="4.90" data-slug="citazione-8">
+            <span class="product-badge">#8</span>
+            <img class="product-photo" src="prodotti/8.png" alt="Portachiave &quot;'A femmena bella nasce maretata&quot;">
+            <div class="product-info">
+              <h3>Portachiave "'A femmena bella nasce maretata"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=citazione-8" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Portachiave &quot;Mo che torna patete sient&quot;" data-category="frasi" data-price="4.90" data-slug="citazione-9">
+            <span class="product-badge badge-yellow">#9</span>
+            <img class="product-photo" src="prodotti/9.png" alt="Portachiave &quot;Mo che torna patete sient&quot;">
+            <div class="product-info">
+              <h3>Portachiave "Mo che torna patete sient"</h3>
+              <div class="product-bottom">
+                <strong>4,90 €</strong>
+                <a href="prodotto.html?prodotto=citazione-9" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product="Combo portachiavi Dicette Mammà" data-category="frasi" data-price="12.90" data-slug="combo-portachiavi">
+            <span class="product-badge badge-yellow">#10</span>
+            <img class="product-photo" src="prodotti/combo.png" alt="Combo portachiavi Dicette Mammà">
+            <div class="product-info">
+              <h3>Combo portachiavi Dicette Mammà</h3>
+              <p>Set coordinato con più portachiavi Dicette Mammà.</p>
+              <div class="product-bottom">
+                <strong>12,90 €</strong>
+                <a href="prodotto.html?prodotto=combo-portachiavi" class="mini-link product-action">Ordina</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="footer-brand" href="index.html#home" aria-label="Vai alla Home di Dicette Mammà">
+          <img class="site-logo footer-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
+        </a>
+      </div>
+      <div>
+        <h2>Link rapidi</h2>
+        <a href="portachiavi.html">Portachiavi</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h2>Social</h2>
+        <a href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/393793417872" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p class="footer-note">
+        Copyright &copy; 2026 Dicette Mammà. Tutti i diritti riservati. <br>
+      </p>
+    </footer>
+  </body>
+</html>
