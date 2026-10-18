@@ -169,7 +169,7 @@ function artSvg(type,text,base,ink,mode='card') {
 
 function livePreviewMarkup(product,text,baseColor,inkColor){
   if(product.image){
-    const baseLabel = product.id==='cappellino' ? 'Colore cappellino' : product.id==='portachiavi' ? 'Colore base' : 'Colore cornice';
+    const baseLabel = product.id==='cappellino' ? 'Colore cappellino' : product.id==='portachiavi' ? 'Colore portachiavi' : 'Colore cornice';
     return `<div class="real-preview-card"><div class="real-preview-label">Anteprima prodotto</div><img class="real-preview-photo" src="${safe(product.image)}" alt="${safe(product.title)}"><div class="real-preview-summary"><div><strong>Scritta:</strong> ${safe(text.toUpperCase())}</div><div><strong>${safe(baseLabel)}:</strong> ${safe(colorName(baseColor))}</div><div><strong>Colore scritta:</strong> ${safe(colorName(inkColor))}</div>${product.usage?`<div><strong>Uso:</strong> ${safe(product.usage)}</div>`:''}</div><p>Anteprima illustrativa: la scritta e i colori scelti vengono riportati nella tua richiesta.</p></div></div>`;
   }
   return artSvg(product.id,text,baseColor,inkColor);
@@ -181,7 +181,7 @@ function renderCards(){
   document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openProduct(button.dataset.open)));
 }
 function swatchOptions(group,selected){
- const colors = currentProduct.id==='cappellino' ? CHRISTMAS_PALETTE : PALETTE;
+ const colors = ['cappellino','portachiavi'].includes(currentProduct.id) ? CHRISTMAS_PALETTE : PALETTE;
  return colors.map((color,index)=>`<label class="swatch-label"><input type="radio" name="${group}" value="${color.hex}" ${color.hex===selected?'checked':''} aria-label="${color.name}"><span class="swatch-dot" style="--swatch:${color.hex}" aria-hidden="true"></span><span>${color.name}</span></label>`).join('');
 }
 function openProduct(id){
