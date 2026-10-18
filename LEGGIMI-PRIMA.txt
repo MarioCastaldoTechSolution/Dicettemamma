@@ -1,0 +1,28 @@
+DICETTE MAMMÀ - CALAMITA (CORREZIONE DEFINITIVA)
+
+Perché in precedenza non si aggiornava:
+Dopo la correzione del portachiavi, index.html caricava catalogo-dicette-20261018-v3.js.
+Il successivo ZIP con la calamita aggiornava invece app.js e richiamava la vecchia struttura, creando un conflitto.
+
+Questa versione elimina la dipendenza da entrambi i file: CSS e JavaScript sono integrati in index.html.
+
+PER PUBBLICARE
+1. Estrai lo ZIP.
+2. Apri il repository GitHub, branch main, cartella principale / (la stessa del tuo CNAME).
+3. Carica index.html e le immagini PNG nella CARTELLA PRINCIPALE (non un'ulteriore sottocartella).
+4. Sovrascrivi index.html e conferma il commit.
+5. Attendi GitHub Pages in Actions, poi aggiorna la pagina o aprila in incognito.
+6. Verifica che nel codice sorgente della pagina ci sia: calamita-20261018-v4-integrato.
+
+COSA MOSTRERA'
+1) Cappellino segnaposto / portachiavi - 3,90 euro - default O' PAZZ.
+2) Calamita personalizzata - 5,90 euro (prezzo da confermare) - foto originale.
+3) Portachiavi 3D - 4,90 euro - foto originale.
+
+La fotografia non cambia automaticamente con colori o frase: il popup indica le scelte e le trasmette su WhatsApp.
+Il carrello prepara una richiesta non vincolante, non un pagamento.
+
+Whatsapp preconfigurato: +39 379 341 7872 (verificare prima di pubblicare).
+Per modificarlo, cercare 'whatsappNumber' in index.html.
+
+Non caricare il vecchio index-tutto-in-uno.html o altri JS: questa versione necessita solo di index.html e delle immagini incluse.
