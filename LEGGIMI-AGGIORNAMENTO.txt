@@ -1,0 +1,25 @@
+DICETTE MAMMÀ — AGGIORNAMENTO PORTACHIAVI (18 OTTOBRE 2026)
+
+PERCHÉ IL PORTACHIAVI NON CAMBIAVA:
+Nel repository il vecchio app.js era ancora presente. Questa versione usa
+un nome NUOVO, catalogo-dicette-20261018-v3.js, per evitare sovrascritture o cache.
+
+CARICAMENTO SU GITHUB:
+1. Apri MarioCastaldoTechSolution/Dicettemamma, branch main.
+2. Carica TUTTI i file di questa cartella nella RADICE del repository (non una sottocartella).
+3. Controlla che index.html sia davvero quello aggiornato, con le righe:
+   <link rel="stylesheet" href="styles-dicette-20261018-v3.css">
+   <script src="catalogo-dicette-20261018-v3.js" defer></script>
+4. Se index.html non viene sovrascritto, aprilo con la matita e modifica MANUALMENTE
+   solo i riferimenti vecchi styles.css e app.js con i due nuovi nomi.
+5. Conferma su main, verifica GitHub Actions -> Pages, poi apri in incognito.
+
+CONTROLLO:
+- cappellino predefinito: O' PAZZ — 3,90 €
+- portachiavi: NUN SI BUON MANC SOTT'UOGLIO — 4,90 €
+- immagine: portachiavi-nun-si-buon-manc.png
+- popup e carrello: fotografia e riepilogo della personalizzazione
+
+IMPORTANTE: la foto prodotto NON ricolora realmente le lettere quando scegli
+varianti. Il riepilogo vicino alla foto riporta le selezioni del cliente.
+Il carrello invia una richiesta WhatsApp: non effettua pagamenti.
