@@ -2,7 +2,7 @@
 
 const PRODUCTS = [
   { id:'cappellino', category:'SEGNAPOSTO O PORTACHIAVI', tag:'2 usi in 1', title:'Cappellino segnaposto / portachiavi', description:'Un cappellino, due modi di usarlo: segnaposto per la tavola oppure portachiavi da portare sempre con te. Personalizza il nome o la scritta e scegli i colori che preferisci.', price:3.90, defaultText:"O' PAZZ", maxLength:16, label:'Che ci scriviamo sopra?', placeholder:"Es. O' PAZZ", base:'#d94b4b', ink:'#1e1e1e', image:'cappellino-personalizzato.png', usage:'Segnaposto e/o portachiavi' },
-  { id:'quadretto', category:'DAL POST ALLA PARETE', tag:'La frase del cuore', title:'Mini quadretto', description:'Quella frase di Mammà che vorresti incorniciare? Mo se po’! Scegli la scritta e falla diventare il pezzo forte della stanza.', price:7.90, defaultText:'MAMMÀ TENE SEMPE RAGIONE', maxLength:46, label:'Quale frase incorniciamo?', placeholder:'Es. Mammà tene sempe ragione', base:'#c7745c', ink:'#283c57', usage:'Mini quadretto personalizzato' },
+  { id:'calamita', category:'FRASI DA FRIGO', tag:'Nuova entrata', title:'Calamita personalizzata', description:'La frase che ti fa ridere, una dedica o un pensiero da attaccare al frigo. Personalizzala e trasformala in una calamita piena di carattere.', price:5.90, defaultText:'VERITAVENNE BENE CA’ SE MORE.', maxLength:34, label:'Quale frase ci mettiamo?', placeholder:'Es. VERITAVENNE BENE CA’ SE MORE.', base:'#e13a3a', ink:'#fffaf2', image:'calamita-rossa-bianca.png', usage:'Calamita personalizzata' },
   { id:'portachiavi', category:'NAPOLI DA PORTARE', tag:'Sempre con te', title:'Portachiavi 3D', description:'Le battute che condividi su @dicettemamma ora vengono in tasca con te. Un nome o la tua frase preferita: scegli tu.', price:4.90, defaultText:"NUN SI BUON MANC SOTT'UOGLIO", maxLength:30, label:'Quale frase porti in giro?', placeholder:"Es. NUN SI BUON MANC SOTT'UOGLIO", base:'#e13a3a', ink:'#fff9ee', image:'portachiavi-rosso-con-scritta-bianca.png', usage:'Portachiavi personalizzato' }
 ];
 // Palette del marchio neutra e utilizzabile tutto l'anno.
@@ -70,7 +70,7 @@ function artSvg(type,text,base,ink,mode='card') {
 
 function livePreviewMarkup(product,text,baseColor,inkColor){
   if(product.image){
-    const baseLabel = product.id==='cappellino' ? 'Colore cappellino' : product.id==='portachiavi' ? 'Colore portachiavi' : 'Colore cornice';
+    const baseLabel = product.id==='cappellino' ? 'Colore cappellino' : product.id==='portachiavi' ? 'Colore portachiavi' : product.id==='calamita' ? 'Colore bordo' : 'Colore cornice';
     return `<div class="real-preview-card"><div class="real-preview-label">Anteprima prodotto</div><img class="real-preview-photo" src="${safe(product.image)}" alt="${safe(product.title)}"><div class="real-preview-summary"><div><strong>Scritta:</strong> ${safe(text.toUpperCase())}</div><div><strong>${safe(baseLabel)}:</strong> ${safe(colorName(baseColor))}</div><div><strong>Colore scritta:</strong> ${safe(colorName(inkColor))}</div>${product.usage?`<div><strong>Uso:</strong> ${safe(product.usage)}</div>`:''}</div><p>Anteprima illustrativa: la scritta e i colori scelti vengono riportati nella tua richiesta.</p></div></div>`;
   }
   return artSvg(product.id,text,baseColor,inkColor);
@@ -82,7 +82,7 @@ function renderCards(){
   document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openProduct(button.dataset.open)));
 }
 function swatchOptions(group,selected){
- const colors = ['cappellino','portachiavi'].includes(currentProduct.id) ? CHRISTMAS_PALETTE : PALETTE;
+ const colors = ['cappellino','portachiavi','calamita'].includes(currentProduct.id) ? CHRISTMAS_PALETTE : PALETTE;
  return colors.map((color,index)=>`<label class="swatch-label"><input type="radio" name="${group}" value="${color.hex}" ${color.hex===selected?'checked':''} aria-label="${color.name}"><span class="swatch-dot" style="--swatch:${color.hex}" aria-hidden="true"></span><span>${color.name}</span></label>`).join('');
 }
 function openProduct(id){
