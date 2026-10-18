@@ -1,21 +1,22 @@
-DICETTE MAMMÀ - AGGIORNAMENTO CON LOGO ORIGINALE
+DICETTE MAMMÀ — VERSIONE "PRIMA LE LEGGEVI. MO TE LE PORTI A CASA."
 
-Pacchetto per GitHub Pages, con logo caricato dall'utente.
+NOVITÀ
+- Tutti i testi riscritti in tono ironico e moderno, collegati a Instagram @dicettemamma.
+- Grafica originale mantenuta: stesso CSS, logo trasparente nell’header, logo originale nel footer.
+- Tre prodotti: cappellino natalizio, mini quadretto e portachiavi.
+- Personalizzazione, anteprima e carrello locale invariati.
+- Le richieste vengono preparate su WhatsApp: NON ci sono pagamenti online né ordini archiviati sul server.
 
-VERSIONE IN PIÙ FILE:
-Carica i file nella radice del repository:
-- index.html
-- styles.css
-- app.js
-- config.js
-- logo-dicette-mamma.jpg (OBBLIGATORIO per mostrare il logo)
-- CNAME (mantiene il dominio)
+PUBBLICAZIONE SU GITHUB PAGES
+1) Salva una copia del repository attuale.
+2) Carica i file di questo ZIP nella radice del repository (sovrascrivi i file omonimi):
+   index.html, styles.css, app.js, config.js, logo-dicette-mamma-header.png,
+   logo-dicette-mamma.jpg, CNAME.
+3) Esegui il commit. Attendi la pubblicazione, poi aggiorna il browser con Ctrl+F5.
+4) Verifica il numero WhatsApp in config.js prima di pubblicare.
+5) In config.js, GA4 è disattivo fino a corretta configurazione delle impostazioni privacy.
 
-VERSIONE UN SOLO FILE:
-Usa il contenuto del file Dicette_Mamma_Con_Logo_Tutto_In_Uno.html come index.html.
-Il logo è incorporato direttamente in HTML; mantieni il tuo CNAME originale.
-
-Il logo compare nell'intestazione, nel piè di pagina e come favicon.
-La personalizzazione e il carrello con invio WhatsApp restano invariati.
-Verifica in config.js il numero WhatsApp e aggiorna con Ctrl+F5 dopo la pubblicazione.
-Il sito NON riceve pagamenti e non archivia ordini sul server.
+NOTE
+La combinazione di personalizzazione e carrello genera una richiesta, non una vendita.
+Prima di iniziare a vendere realmente verifica adempimenti fiscali e legali pertinenti.
+Le anteprime dei prodotti sono illustrazioni, non fotografie di stampe reali.

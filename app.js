@@ -1,9 +1,9 @@
 'use strict';
 
 const PRODUCTS = [
-  { id:'cappellino', category:'COLLEZIONE NATALE', tag:'Edizione delle feste', title:'Cappellino segnaposto', description:'Un nome, un posto speciale a tavola. Un pensiero da conservare anche dopo le feste.', price:5.90, defaultText:'GENNARO', maxLength:20, label:'Nome da inserire', placeholder:'Es. Gennaro', base:'#b84546', ink:'#21483c' },
-  { id:'quadretto', category:'FRASI & DEDICHE', tag:'Per ogni occasione', title:'Mini quadretto', description:'Le parole belle meritano una cornice. Una frase napoletana, un nome, una dedica.', price:7.90, defaultText:'MAMMÀ TENE SEMPE RAGIONE', maxLength:46, label:'Frase o dedica', placeholder:'Es. Mammà tene sempe ragione', base:'#c7745c', ink:'#283c57' },
-  { id:'portachiavi', category:'SEMPRE CON TE', tag:'Da portare sempre', title:'Portachiavi 3D', description:'La tua frase del cuore in tasca, tra colori morbidi e tanta personalità.', price:4.90, defaultText:'NUN ME SCUCCIÀ', maxLength:30, label:'Nome o frase breve', placeholder:'Es. Nun me scuccià', base:'#283c57', ink:'#fff9ee' }
+  { id:'cappellino', category:'SPECIALE NATALE', tag:'Solo per le feste', title:'Cappellino segnaposto', description:'A Natale c’è un posto per tutti… e Mammà lo decide! Il cappellino con il nome che vuoi, per una tavola piena di risate.', price:5.90, defaultText:'GENNARO', maxLength:20, label:'Come lo chiamiamo?', placeholder:'Es. Gennaro', base:'#b84546', ink:'#21483c' },
+  { id:'quadretto', category:'DAL POST ALLA PARETE', tag:'La frase del cuore', title:'Mini quadretto', description:'Quella frase di Mammà che vorresti incorniciare? Mo se po’! Scegli la scritta e falla diventare il pezzo forte della stanza.', price:7.90, defaultText:'MAMMÀ TENE SEMPE RAGIONE', maxLength:46, label:'Quale frase incorniciamo?', placeholder:'Es. Mammà tene sempe ragione', base:'#c7745c', ink:'#283c57' },
+  { id:'portachiavi', category:'NAPOLI DA PORTARE', tag:'Sempre con te', title:'Portachiavi 3D', description:'Le battute che condividi su @dicettemamma ora vengono in tasca con te. Un nome o la tua frase preferita: scegli tu.', price:4.90, defaultText:'NUN ME SCUCCIÀ', maxLength:30, label:'Quale frase porti in giro?', placeholder:'Es. Nun me scuccià', base:'#283c57', ink:'#fff9ee' }
 ];
 // Palette del marchio neutra e utilizzabile tutto l'anno.
 const PALETTE = [
@@ -68,7 +68,7 @@ function artSvg(type,text,base,ink,mode='card') {
 
 function renderCards(){
   byId('heroArt').innerHTML=artSvg('quadretto','MAMMÀ TENE SEMPE RAGIONE', '#c7745c','#283c57','hero');
-  byId('productsGrid').innerHTML=PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Illustrazione di ${safe(product.title)}">${artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>A partire da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Personalizza ↗</button></div></div></article>`).join('');
+  byId('productsGrid').innerHTML=PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Illustrazione di ${safe(product.title)}">${artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>Da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Scegli la frase ↗</button></div></div></article>`).join('');
   document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openProduct(button.dataset.open)));
 }
 function swatchOptions(group,selected){
@@ -95,10 +95,10 @@ function updatePreview(){
   const f=byId('customForm');
   const base=f.elements.base?.value||currentProduct.base;
   const ink=f.elements.ink?.value||currentProduct.ink;
-  const text=byId('customText').value||'IL TUO TESTO';
+  const text=byId('customText').value||'LA TUA FRASE';
   byId('customPreview').innerHTML=artSvg(currentProduct.id,text,base,ink);
   byId('customPrice').textContent=money(currentProduct.price*getQuantity());
-  byId('textCounter').textContent=`${byId('customText').value.length}/${currentProduct.maxLength} caratteri · anteprima indicativa`;
+  byId('textCounter').textContent=`${byId('customText').value.length}/${currentProduct.maxLength} caratteri · questa è un’anteprima`;
 }
 function getQuantity(){const n=Number(byId('customQuantity').value);return Number.isFinite(n)?Math.min(50,Math.max(1,Math.round(n))):1;}
 function addItem(event){
@@ -115,7 +115,7 @@ function addItem(event){
   else cart.push({key,id:currentProduct.id,text,base,ink,note,qty});
   saveCart();
   byId('customizeDialog').close();
-  toast('Aggiunto al carrello!');
+  toast('Messo nel carrello! Mo scegli pure il prossimo.');
   analytics('add_to_cart',{currency:'EUR',value:currentProduct.price*qty,items:[{item_id:currentProduct.id,item_name:currentProduct.title,quantity:qty,price:currentProduct.price}]});
   openCart();
 }
@@ -128,7 +128,7 @@ function updateCart(){
  const total=cart.reduce((s,i)=>s+(PRODUCTS.find(p=>p.id===i.id)?.price||0)*i.qty,0);
  byId('cartTotal').textContent=money(total);
  byId('sendRequestButton').disabled=count===0;
- if(!count){byId('cartContents').innerHTML='<div class="cart-empty"><span aria-hidden="true">♡</span><strong>Qui manca solo un pensiero.</strong><p>Scegli uno dei tre prodotti e rendilo speciale.</p></div>';return;}
+ if(!count){byId('cartContents').innerHTML='<div class="cart-empty"><span aria-hidden="true">♡</span><strong>Qua nun ce sta ancora niente!</strong><p>Scegli una creazione e mettici la tua frase preferita.</p></div>';return;}
  byId('cartContents').innerHTML=cart.map((item,i)=>{
  const product=PRODUCTS.find(p=>p.id===item.id);
  return `<article class="cart-item"><div class="cart-item-art">${artSvg(product.id,item.text,item.base,item.ink)}</div><div><div class="cart-item-name">${safe(product.title)}</div><div class="cart-item-detail">${safe(item.text)}</div><div class="cart-item-detail">Base: ${safe(colorName(item.base))} · Testo: ${safe(colorName(item.ink))}</div>${item.note?`<div class="cart-item-detail">Nota: ${safe(item.note)}</div>`:''}<div class="cart-item-footer"><strong>${money(product.price*item.qty)}</strong><div class="qty-tools"><button type="button" data-index="${i}" data-action="minus" aria-label="Riduci quantità ${safe(product.title)}">−</button><span aria-label="Quantità">${item.qty}</span><button type="button" data-index="${i}" data-action="plus" aria-label="Aumenta quantità ${safe(product.title)}">+</button></div></div><button type="button" class="cart-remove" data-index="${i}" data-action="remove">Rimuovi</button></div></article>`;
@@ -142,13 +142,13 @@ function sendRequest(){
  const num=String(CONFIG.whatsappNumber||'').replace(/\D/g,'');
  if(!num){toast('Configura il numero WhatsApp in config.js');return;}
  const total=cart.reduce((s,item)=>s+PRODUCTS.find(p=>p.id===item.id).price*item.qty,0);
- const lines=['Ciao! Vorrei chiedere informazioni e disponibilità per questi prodotti Dicette Mammà:',''];
+ const lines=['Ciao Dicette Mammà! Ho scelto queste creazioni dal sito e vorrei conoscerne disponibilità e dettagli:',''];
  cart.forEach((item,i)=>{
   const p=PRODUCTS.find(p=>p.id===item.id);
   lines.push(`${i+1}) ${p.title}`,`   Testo: ${item.text}`,`   Colore base: ${colorName(item.base)}`,`   Colore scritta: ${colorName(item.ink)}`,`   Quantità: ${item.qty}`,`   Prezzo indicativo: ${money(p.price*item.qty)}`);
   if(item.note)lines.push(`   Note: ${item.note}`);lines.push('');
  });
- lines.push(`Totale prodotti indicativo: ${money(total)}`,'Spedizione e disponibilità da confermare.','Questa è una richiesta non vincolante, non un ordine pagato.');
+ lines.push(`Totale prodotti indicativo: ${money(total)}`,'Spedizione e disponibilità da confermare.','Questa è solo una richiesta non vincolante: nessun pagamento e nessun ordine confermato.');
  const href=`https://wa.me/${num}?text=${encodeURIComponent(lines.join('\n'))}`;
  analytics('request_via_whatsapp',{currency:'EUR',value:total,items:cart.map(i=>({item_id:i.id,quantity:i.qty}))});
  const win=window.open(href,'_blank','noopener,noreferrer');
