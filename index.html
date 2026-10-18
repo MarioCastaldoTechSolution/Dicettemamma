@@ -3,43 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Dicette Mammà crea portachiavi napoletani personalizzati, stampati in 3D e pieni di carattere."
-    >
-    <title>Dicette Mammà | Portachiavi napoletani personalizzati</title>
-
-    <!-- Google Analytics 4. -->
+    <meta name="description" content="Dicette Mammà: oggetti stampati in 3D ispirati a Napoli, personalizzabili e pronti da ordinare via WhatsApp.">
+    <title>Dicette Mammà | Idee regalo napoletane stampate in 3D</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV1SM1ZGT9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XV1SM1ZGT9");
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-XV1SM1ZGT9');
     </script>
-
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html#home" aria-label="Vai alla Home di Dicette Mammà">
+      <a class="brand" href="index.html" aria-label="Dicette Mammà home">
         <img class="site-logo header-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
       </a>
 
       <button class="nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
         <span class="sr-only">Apri menu</span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
       <nav class="nav-menu" id="site-menu" aria-label="Menu principale">
         <a href="index.html#home">Home</a>
-        <a href="portachiavi.html">Portachiavi</a>
-        <a href="index.html#storia">Storia</a>
+        <a href="portachiavi.html">Prodotti</a>
+        <a href="index.html#come-funziona">Come funziona</a>
         <a href="index.html#faq">FAQ</a>
         <a href="index.html#contatti">Contatti</a>
         <a class="nav-cta" href="portachiavi.html">Ordina ora</a>
@@ -47,219 +37,142 @@
     </header>
 
     <main>
-      <section class="hero section reveal" id="home">
-        <div class="hero-copy">
-          <h1 class="hero-title-logo">
-            <img src="logo-dicette-mamma.png" alt="Dicette Mammà">
-          </h1>
-          <p class="hero-subtitle">
-            Portachiavi napoletani personalizzati e pieni di carattere.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="portachiavi.html">Scegli il tuo portachiavi</a>
-            <a class="button button-secondary" href="index.html#storia">Scopri la storia</a>
+      <section class="hero" id="home">
+        <div class="section hero-grid reveal">
+          <div class="hero-copy">
+            <span class="eyebrow">Napoli mood · stampa 3D · personalizzabile</span>
+            <h1>Regali napoletani pieni di carattere, fatti per essere scelti al volo.</h1>
+            <p class="hero-lead">Dicette Mammà trasforma frasi, nomi e idee regalo in piccoli oggetti stampati in 3D: <strong>cappellino segnaposto</strong>, <strong>mini quadretto</strong> e <strong>portachiavi</strong>.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="portachiavi.html">Scopri i prodotti</a>
+              <a class="button button-secondary" href="#come-funziona">Come si ordina</a>
+            </div>
+            <div class="hero-badges">
+              <span>Ordine via WhatsApp</span>
+              <span>Personalizzabile</span>
+              <span>Made in Napoli mood</span>
+            </div>
           </div>
-          <div class="hero-badges" aria-label="Caratteristiche principali">
-            <span>Novità</span>
-            <span>Personalizzabile</span>
-            <span>Idea regalo</span>
-          </div>
-        </div>
 
-        <div class="hero-art" aria-label="Portachiavi colorati Dicette Mammà">
-          <img class="hero-photo" src="home-portachiavi.png" alt="Portachiavi personalizzati Dicette Mammà stampati in 3D">
-          <span class="floating-sticker sticker-new">Novità</span>
-          <span class="floating-sticker sticker-local">Made in Napoli mood</span>
+          <div class="hero-visual">
+            <article class="hero-card hero-card-main soft-shadow">
+              <span class="card-tag green">Novità</span>
+              <img src="home-portachiavi.png" alt="Portachiavi Dicette Mammà" class="hero-showcase">
+            </article>
+            <article class="hero-card hero-card-small soft-shadow">
+              <img src="assets/cappellino-segnaposto.png" alt="Cappellino segnaposto personalizzabile" class="hero-thumb">
+              <div>
+                <strong>Cappellino segnaposto</strong>
+                <p>Personalizzabile con nome</p>
+              </div>
+            </article>
+            <article class="hero-card hero-card-small soft-shadow">
+              <img src="assets/mini-quadretto.png" alt="Mini quadretto personalizzabile" class="hero-thumb">
+              <div>
+                <strong>Mini quadretto</strong>
+                <p>Frase o nome su richiesta</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section products reveal" id="piu-amati" aria-labelledby="favorites-title">
+      <section class="section reveal" aria-labelledby="featuredTitle">
         <div class="section-heading split">
           <div>
-            <span class="eyebrow">Le citazioni scelte</span>
-            <h2 id="favorites-title">Le citazioni scelte dai nostri followers</h2>
+            <span class="eyebrow">I 3 prodotti da testare</span>
+            <h2 id="featuredTitle">Pochi prodotti, chiari, personalizzabili e facili da ordinare.</h2>
           </div>
-          <a class="button button-secondary" href="portachiavi.html">Vedi tutti i portachiavi</a>
+          <a class="button button-secondary" href="portachiavi.html">Vai al catalogo</a>
         </div>
-
-        <div class="product-grid">
-          <article class="product-card" data-product="Portachiave Nun t'fidà e nisciun" data-slug="nun-t-fida-e-nisciun">
-            <span class="product-badge">#1</span>
-            <img class="product-photo" src="prodotti/1.png" alt="Portachiave Nun t'fidà e nisciun">
-            <div class="product-info">
-              <h3>Portachiave "Nun t'fidà e nisciun"</h3>
-              <div class="product-bottom">
-                <strong>4,90 €</strong>
-                <a href="prodotto.html?prodotto=nun-t-fida-e-nisciun" class="mini-link product-action">Ordina</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-product="Portachiave San Gennà, m'arraccumann" data-slug="san-genna-m-arraccumann">
-            <span class="product-badge badge-blue">#2</span>
-            <img class="product-photo" src="prodotti/2.png" alt="Portachiave San Gennà, m'arraccumann">
-            <div class="product-info">
-              <h3>Portachiave "San Gennà, m'arraccumann"</h3>
-              <div class="product-bottom">
-                <strong>4,90 €</strong>
-                <a href="prodotto.html?prodotto=san-genna-m-arraccumann" class="mini-link product-action">Ordina</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-product="Portachiave Nun si buon manc sott'uoglio" data-slug="nun-si-buon-manc-sott-uoglio">
-            <span class="product-badge badge-mint">#3</span>
-            <img class="product-photo" src="prodotti/3.png" alt="Portachiave Nun si buon manc sott'uoglio">
-            <div class="product-info">
-              <h3>Portachiave "Nun si buon manc sott'uoglio"</h3>
-              <div class="product-bottom">
-                <strong>4,90 €</strong>
-                <a href="prodotto.html?prodotto=nun-si-buon-manc-sott-uoglio" class="mini-link product-action">Ordina</a>
-              </div>
-            </div>
-          </article>
-        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
       </section>
 
-      <section class="section intro-strip reveal" aria-labelledby="instagram-title">
+      <section class="section intro-strip reveal" id="come-funziona">
         <div>
-          <span class="eyebrow">Nati da Instagram</span>
-          <h2 id="instagram-title">Dai post ai portachiavi da portare con te.</h2>
+          <span class="eyebrow">Come funziona</span>
+          <h2>Un sito più semplice, un ordine più intuitivo.</h2>
         </div>
-        <p>
-          Dicette Mammà nasce su Instagram come una raccolta di frasi napoletane, modi di
-          dire e citazioni popolari detti da una Mamma. Da semplici post, le frasi sono diventate
-          piccoli oggetti da portare sempre con sé: portachiavi personalizzati, ironici e
-          pieni di Napoli.
-        </p>
+        <p>Selezioni il prodotto, inserisci la personalizzazione, scegli colori e quantità, poi ti portiamo su WhatsApp con il messaggio già compilato. Tu confermi solo se ti va bene tutto.</p>
       </section>
 
-      <section class="section steps reveal" aria-labelledby="steps-title">
-        <div class="section-heading">
-          <span class="eyebrow">Semplice semplice</span>
-          <h2 id="steps-title">Scegli, personalizza, ricevi.</h2>
-        </div>
+      <section class="section reveal">
         <div class="step-grid">
           <article class="step-card">
             <span class="step-number">01</span>
-            <h3>Scegli il tipo</h3>
-            <p>Scegli la tua citazione di Dicette Mammà</p>
+            <h3>Scegli il prodotto</h3>
+            <p>Scegli tra cappellino segnaposto, mini quadretto o portachiavi.</p>
           </article>
           <article class="step-card">
             <span class="step-number">02</span>
-            <h3>Metti il tuo tocco</h3>
-            <p>Decidi colori e dettagli per renderlo davvero tuo.</p>
+            <h3>Personalizza</h3>
+            <p>Inserisci nome o frase e scegli i colori che preferisci.</p>
           </article>
           <article class="step-card">
             <span class="step-number">03</span>
-            <h3>Ricevi il pezzo</h3>
-            <p>Lo prepariamo e ti aggiorniamo su tempi, ritiro o spedizione.</p>
+            <h3>Invia richiesta</h3>
+            <p>Su WhatsApp riceviamo i dettagli del tuo ordine e ti rispondiamo rapidamente.</p>
           </article>
         </div>
       </section>
 
-      <section class="section story reveal" id="storia" aria-labelledby="story-title">
+      <section class="section story reveal" aria-labelledby="storyTitle">
         <div class="story-card">
           <span class="eyebrow">La storia</span>
-          <h2 id="story-title">Una frase detta in casa può diventare un oggetto da regalare.</h2>
-          <p>
-            Dicette Mammà nasce da un'idea semplice: trasformare il linguaggio di casa,
-            le frasi sentite mille volte e i modi di dire napoletani in contenuti moderni,
-            colorati e condivisibili. Dopo i primi post su Instagram, l'idea è cresciuta:
-            perché lasciare quelle frasi solo sul telefono? Così sono nati i portachiavi
-            Dicette Mammà, piccoli oggetti stampati in 3D che raccontano ironia, affetto e
-            napoletanità.
-          </p>
+          <h2 id="storyTitle">Dal profilo Instagram agli oggetti da regalare.</h2>
+          <p>Dicette Mammà nasce dai modi di dire, dalle battute e dalle frasi che fanno sorridere chi ama Napoli. Oggi quelle stesse idee diventano oggetti stampati in 3D, colorati, personalizzabili e perfetti per un regalo originale.</p>
         </div>
       </section>
 
-      <section class="section social reveal" aria-labelledby="social-title">
-        <div class="section-heading split">
-          <div>
-            <span class="eyebrow">Community</span>
-            <h2 id="social-title">Seguici su Instagram e porta la frase più amata fuori dallo schermo.</h2>
-          </div>
-          <a class="button button-secondary" href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">
-            @dicettemamma
-          </a>
-        </div>
-        <div class="social-tiles" aria-label="Esempi di post social Dicette Mammà">
-          <div>"NUN T'FIDA''E NISCIUN"</div>
-          <div>"MO CHE TORNA PATETE SIENT"</div>
-          <div>"ASSA'FA''A MARONNA"</div>
-          <div>"SIT BUTTUN CA N'APPONTEN"</div>
-        </div>
-      </section>
-
-      <section class="section faq reveal" id="faq" aria-labelledby="faq-title">
+      <section class="section faq reveal" id="faq">
         <div class="section-heading">
-          <span class="eyebrow">Domande frequenti</span>
-          <h2 id="faq-title">FAQ senza giri di parole.</h2>
+          <span class="eyebrow">FAQ</span>
+          <h2>Domande frequenti</h2>
         </div>
-
         <div class="faq-list">
           <details>
-            <summary>Posso scegliere qualsiasi frase?</summary>
-            <p>Sì, puoi proporre una frase napoletana, una citazione, una dedica o un testo breve. Se serve, ti aiutiamo ad adattarlo allo spazio del portachiavi.</p>
+            <summary>Posso personalizzare ogni prodotto?</summary>
+            <p>Sì. Per ogni articolo puoi indicare nome o frase, quantità, note e preferenze colore.</p>
           </details>
           <details>
-            <summary>Quanto tempo serve per realizzare un portachiavi?</summary>
-            <p>Dipende dalla personalizzazione e dalla quantità. In genere prepariamo una stima dei tempi direttamente su WhatsApp prima della conferma.</p>
+            <summary>Ordino e pago direttamente dal sito?</summary>
+            <p>Per ora l'ordine viene inviato su WhatsApp già compilato, così puoi confermare tutto prima della produzione.</p>
           </details>
           <details>
-            <summary>Posso scegliere i colori?</summary>
-            <p>Sì, puoi indicare colore base e colore della scritta. Ti confermiamo la disponibilità dei colori prima di avviare la stampa.</p>
+            <summary>Quanto tempo serve?</summary>
+            <p>Dipende dal prodotto e dalla quantità. I tempi vengono confermati su WhatsApp prima della conferma finale.</p>
           </details>
           <details>
             <summary>Fate spedizione?</summary>
-            <p>Sì, la spedizione può essere concordata in fase d'ordine. In alternativa, se disponibile, puoi chiedere anche il ritiro.</p>
-          </details>
-          <details>
-            <summary>Posso ordinare più pezzi?</summary>
-            <p>Certo. Puoi indicare la quantità nel form e aggiungere eventuali differenze tra i pezzi nelle note.</p>
-          </details>
-          <details>
-            <summary>Posso inserire un nome o una dedica?</summary>
-            <p>Sì, nomi e dediche brevi sono perfetti per rendere il portachiavi più personale.</p>
-          </details>
-          <details>
-            <summary>Come posso pagare?</summary>
-            <p>Puoi pagare con bonifico bancario, PayPal o in contanti alla consegna. Ti invieremo un messaggio con i dettagli per completare l'ordine.</p>
+            <p>Sì, spedizione o consegna vengono concordate in fase d'ordine.</p>
           </details>
         </div>
       </section>
 
-      <section class="section contacts reveal" id="contatti" aria-labelledby="contacts-title">
+      <section class="section contact-strip reveal" id="contatti">
         <div>
           <span class="eyebrow">Contatti</span>
-          <h2 id="contacts-title">Hai una frase in testa? Mandacela.</h2>
+          <h2>Pronto a testare il tuo primo ordine?</h2>
+          <p>Scrivici su Instagram oppure vai direttamente al catalogo e scegli il prodotto da personalizzare.</p>
         </div>
-        <div class="contact-grid">
-          <a class="contact-card" href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">
-            <span>Instagram</span>
-            <strong>@dicettemamma</strong>
-          </a>
-          <a class="contact-card" href="https://wa.me/393793417872" target="_blank" rel="noopener">
-            <span>WhatsApp</span>
-            <strong>+39 379 341 7872</strong>
-          </a>
-          <a class="contact-card" href="mailto:dicettemamma@gmail.com">
-            <span>Email</span>
-            <strong>dicettemamma@gmail.com</strong>
-          </a>
+        <div class="contact-actions">
+          <a class="button button-primary" href="portachiavi.html">Vedi i prodotti</a>
+          <a class="button button-secondary" href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">Instagram</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div>
-        <a class="footer-brand" href="index.html#home" aria-label="Vai alla Home di Dicette Mammà">
+        <a class="footer-brand" href="index.html" aria-label="Vai alla Home di Dicette Mammà">
           <img class="site-logo footer-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
         </a>
+        <p class="footer-copy">Oggetti stampati in 3D ispirati a Napoli, personalizzati e pieni di carattere.</p>
       </div>
       <div>
         <h2>Link rapidi</h2>
-        <a href="portachiavi.html">Portachiavi</a>
+        <a href="portachiavi.html">Prodotti</a>
+        <a href="index.html#come-funziona">Come funziona</a>
         <a href="index.html#faq">FAQ</a>
       </div>
       <div>
@@ -267,9 +180,7 @@
         <a href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">Instagram</a>
         <a href="https://wa.me/393793417872" target="_blank" rel="noopener">WhatsApp</a>
       </div>
-      <p class="footer-note">
-        Copyright &copy; 2026 Dicette Mammà. Tutti i diritti riservati. <br>
-      </p>
+      <p class="footer-note">Copyright &copy; 2026 Dicette Mammà. Tutti i diritti riservati.</p>
     </footer>
   </body>
 </html>

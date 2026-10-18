@@ -3,96 +3,83 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Ordina un portachiavi Dicette Mammà scegliendo colori, quantità e dettagli personalizzati."
-    >
-    <title>Ordina portachiave | Dicette Mammà</title>
-
-    <!-- Google Analytics 4. -->
+    <meta name="description" content="Pagina prodotto Dicette Mammà con personalizzazione e ordine via WhatsApp.">
+    <title>Prodotto | Dicette Mammà</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV1SM1ZGT9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XV1SM1ZGT9");
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-XV1SM1ZGT9');
     </script>
-
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html#home" aria-label="Vai alla Home di Dicette Mammà">
+      <a class="brand" href="index.html" aria-label="Dicette Mammà home">
         <img class="site-logo header-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
       </a>
-
       <button class="nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
         <span class="sr-only">Apri menu</span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
-
       <nav class="nav-menu" id="site-menu" aria-label="Menu principale">
-        <a href="index.html#home">Home</a>
-        <a class="is-active" href="portachiavi.html">Portachiavi</a>
-        <a href="index.html#storia">Storia</a>
+        <a href="index.html">Home</a>
+        <a class="is-active" href="portachiavi.html">Prodotti</a>
+        <a href="index.html#come-funziona">Come funziona</a>
         <a href="index.html#faq">FAQ</a>
         <a href="index.html#contatti">Contatti</a>
-        <a class="nav-cta" href="portachiavi.html">Ordina ora</a>
+        <a class="nav-cta" href="portachiavi.html">Tutti i prodotti</a>
       </nav>
     </header>
 
     <main class="product-detail-main" data-product-page>
       <section class="section product-detail reveal">
         <div class="product-detail-media">
-          <a class="mini-link back-link" href="portachiavi.html">Torna ai portachiavi</a>
-          <img id="productPreviewImage" class="product-detail-photo is-hidden" src="prodotti/1.png" alt="">
-          <canvas
-            id="productPreviewCanvas"
-            class="product-canvas product-detail-canvas"
-            width="720"
-            height="520"
-            data-title="Dicette Mammà"
-            data-base="#ff5f5f"
-            data-accent="#ffd447"
-          ></canvas>
+          <a class="mini-link back-link" href="portachiavi.html">← Torna ai prodotti</a>
+          <div class="product-detail-visual soft-shadow">
+            <img id="productPreviewImage" class="product-detail-photo" src="" alt="">
+          </div>
+          <div class="product-highlights">
+            <span id="productBadge" class="inline-chip">Personalizzabile</span>
+            <span class="inline-chip">Ordine via WhatsApp</span>
+            <span class="inline-chip">Stampa 3D</span>
+          </div>
         </div>
 
         <article class="product-order-card">
-          <span class="eyebrow" id="productBadge">Portachiave 3D</span>
-          <h1 id="productTitle">Portachiave Dicette Mammà</h1>
-          <p id="productDescription">Il classico del brand, colorato e ironico.</p>
-          <strong class="product-detail-price" id="productPrice">4,90 €</strong>
+          <span class="eyebrow" id="productCategory">Prodotto Dicette Mammà</span>
+          <h1 id="productTitle">Prodotto Dicette Mammà</h1>
+          <p id="productDescription">Descrizione prodotto.</p>
+          <strong class="product-detail-price" id="productPrice">0,00 €</strong>
 
           <form class="product-order-form" id="productOrderForm">
-            <input type="hidden" id="productType" name="productType" value="Portachiave Dicette Mammà">
+            <input type="hidden" id="productType" name="productType" value="">
 
-            <div class="field">
-              <label for="detailCustomerName">Nome e Cognome</label>
-              <input id="detailCustomerName" name="detailCustomerName" type="text" placeholder="Mario Rossi">
+            <div class="field field-wide">
+              <label for="detailCustomText" id="customTextLabel">Testo da inserire</label>
+              <input id="detailCustomText" name="detailCustomText" type="text" placeholder="Scrivi il nome o la frase" required>
+              <small id="customTextHelp">Ti aiuteremo ad adattare il testo allo spazio disponibile.</small>
             </div>
 
             <div class="field">
-              <label for="detailBaseColor">Colorazione portachiave</label>
+              <label for="detailBaseColor">Colore base</label>
               <select id="detailBaseColor" name="detailBaseColor">
-                <option value="#ff5f5f">Rosso</option>
-                <option value="#111111">Nero</option>
-                <option value="#21b8ff">Azzurro</option>
-                <option value="#fffaf0">Bianco</option>
+                <option value="Bianco">Bianco</option>
+                <option value="Rosso">Rosso</option>
+                <option value="Azzurro">Azzurro</option>
+                <option value="Nero">Nero</option>
               </select>
             </div>
 
             <div class="field">
-              <label for="detailTextColor">Colore citazione</label>
+              <label for="detailTextColor">Colore scritta / dettaglio</label>
               <select id="detailTextColor" name="detailTextColor">
-                <option value="#ff5f5f">Rosso</option>
-                <option value="#111111">Nero</option>
-                <option value="#21b8ff">Azzurro</option>
-                <option value="#fffaf0">Bianco</option>
+                <option value="Rosso">Rosso</option>
+                <option value="Bianco">Bianco</option>
+                <option value="Azzurro">Azzurro</option>
+                <option value="Nero">Nero</option>
               </select>
             </div>
 
@@ -101,38 +88,39 @@
               <input id="detailQuantity" name="detailQuantity" type="number" min="1" value="1" required>
             </div>
 
-            <div class="field field-wide">
-              <label for="detailNotes">Note per l’ordine</label>
-              <textarea id="detailNotes" name="detailNotes" rows="4" placeholder="Se si tratta di un ordine combo, dettagliarci qui i colori dei portachiavi"></textarea>
-            </div>
-
             <div class="field">
-              <label for="detailDiscount">O'Sconto</label>
-              <input id="detailDiscount" name="detailDiscount" type="text" placeholder="Codice sconto (se disponibile)">
+              <label for="detailCustomerName">Nome e cognome</label>
+              <input id="detailCustomerName" name="detailCustomerName" type="text" placeholder="Mario Rossi" required>
             </div>
 
-            <button class="button button-whatsapp product-whatsapp-button field-wide" type="submit">
-              Ordina tramite WhatsApp
-            </button>
+            <div class="field field-wide">
+              <label for="detailContact">Contatto</label>
+              <input id="detailContact" name="detailContact" type="text" placeholder="Telefono o Instagram" required>
+            </div>
+
+            <div class="field field-wide">
+              <label for="detailNotes">Note</label>
+              <textarea id="detailNotes" name="detailNotes" rows="4" placeholder="Eventuali richieste aggiuntive, varianti o dettagli dell'ordine"></textarea>
+            </div>
+
+            <button class="button button-whatsapp product-whatsapp-button field-wide" type="submit">Ordina tramite WhatsApp</button>
           </form>
 
-          <p class="product-detail-note" id="productNote">
-            Ti porteremo su WhatsApp con il messaggio già compilato. Il prodotto viene confermato solo dopo risposta.
-          </p>
+          <p class="product-detail-note" id="productNote">L'ordine viene inviato su WhatsApp già compilato, così puoi confermare ogni dettaglio prima della produzione.</p>
         </article>
       </section>
     </main>
 
     <footer class="site-footer">
       <div>
-        <a class="footer-brand" href="index.html#home" aria-label="Vai alla Home di Dicette Mammà">
+        <a class="footer-brand" href="index.html" aria-label="Vai alla Home di Dicette Mammà">
           <img class="site-logo footer-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
         </a>
+        <p class="footer-copy">Oggetti stampati in 3D ispirati a Napoli e personalizzati per ogni occasione.</p>
       </div>
       <div>
         <h2>Link rapidi</h2>
-        <a href="portachiavi.html">Portachiavi</a>
-        <a href="index.html#storia">Storia</a>
+        <a href="portachiavi.html">Prodotti</a>
         <a href="index.html#faq">FAQ</a>
       </div>
       <div>
@@ -140,9 +128,7 @@
         <a href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">Instagram</a>
         <a href="https://wa.me/393793417872" target="_blank" rel="noopener">WhatsApp</a>
       </div>
-      <p class="footer-note">
-        Copyright &copy; 2026 Dicette Mammà. Tutti i diritti riservati. <br>
-      </p>
+      <p class="footer-note">Copyright &copy; 2026 Dicette Mammà. Tutti i diritti riservati.</p>
     </footer>
   </body>
 </html>
