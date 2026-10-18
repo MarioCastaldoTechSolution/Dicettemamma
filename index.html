@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#283c57">
   <meta name="description" content="Dicette Mammà: le frasi napoletane che ami su Instagram diventano calamite, portachiavi e creazioni 3D personalizzate. Dalla pagina alla tua casa.">
   <title>Dicette Mammà — Le dicette diventano regali</title>
-  <meta name="dicette-build" content="calamita-20261018-v5-natale">
+  <meta name="dicette-build" content="dicette-stay-tuned-20261018-v6">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
@@ -103,6 +103,25 @@ body{background:linear-gradient(180deg,#fbf7f0 0%,#f8f1e9 40%,#fbf7f0 100%)}
 .real-preview-card .real-preview-photo{max-height:270px;object-fit:contain}
 @media(max-width:639px){.hero-magnet-img{max-height:320px}}
 
+
+/* Card teaser - prodotto natalizio non ancora disponibile */
+.teaser-card{background:#fffcf7}
+.teaser-visual{isolation:isolate;overflow:hidden;background:radial-gradient(circle at 50% 37%,#5a8271 0%,#27483f 54%,#173a31 100%)!important;min-height:285px;color:#fff}
+.teaser-visual:before{content:"";position:absolute;inset:17px;border:1px solid rgba(241,219,167,.38);border-radius:160px 160px 13px 13px;z-index:0;pointer-events:none}
+.teaser-visual:after{content:"";position:absolute;inset:30px;border:1px dashed rgba(241,219,167,.24);border-radius:150px 150px 10px 10px;z-index:0;pointer-events:none}
+.teaser-top-label{position:absolute;left:15px;top:16px;z-index:3;border:1px solid rgba(252,242,212,.55);border-radius:999px;background:#faf0d8;color:#4a5c3c;padding:7px 12px;font-size:10px;font-weight:800;letter-spacing:.1em}
+.teaser-focus{position:relative;z-index:2;display:grid;align-items:center;justify-items:center;gap:17px;padding:65px 18px 30px;text-align:center;width:100%}
+.teaser-pretitle{font-size:9px;font-weight:800;letter-spacing:.19em;color:#f1d7a0;line-height:1.5}
+.teaser-focus strong{font:600 clamp(45px,5vw,68px)/.98 var(--display);letter-spacing:-.035em;color:#fff9ee;text-shadow:0 8px 21px #09271a77}
+.teaser-bottomline{font-size:12px;font-family:var(--display);font-style:italic;color:#efd8a5}
+.teaser-sparkle{position:absolute;color:#f1d7a0;z-index:1;pointer-events:none}
+.teaser-sparkle-one{font-size:49px;left:9%;top:34%}
+.teaser-sparkle-two{font-size:34px;right:10%;top:31%}
+.teaser-sparkle-three{font-size:26px;right:17%;bottom:18%}
+.teaser-unavailable{display:inline-flex;padding:10px 13px;border-radius:999px;background:#21483c;color:#fff;font-size:11px;font-weight:800;letter-spacing:.035em}
+.teaser-not-for-sale{font-size:11px;color:var(--sub);font-weight:700;text-align:right}
+@media(max-width:430px){.teaser-focus strong{font-size:54px}.teaser-not-for-sale{font-size:10px}}
+
 </style>
   
 </head>
@@ -163,7 +182,7 @@ body{background:linear-gradient(180deg,#fbf7f0 0%,#f8f1e9 40%,#fbf7f0 100%)}
     <section class="collection section container" id="collezione" aria-labelledby="collection-title">
       <div class="section-head">
         <div><span class="section-kicker">01 / LE NOSTRE CREAZIONI</span><h2 id="collection-title">Mo ’e dicette <em>si stampano.</em></h2></div>
-        <p>Tre modi per portarti a casa un pezzo di Dicette Mammà. Scegli il prodotto, aggiungi la tua frase e preparati a sentirti dire: «Ma addò l’hê pigliato?»</p>
+        <p>Due creazioni personalizzabili e una sorpresa in arrivo. Porta a casa la tua frase preferita… e resta connesso a @dicettemamma!</p>
       </div>
       <div class="products-grid" id="productsGrid"></div>
       <p class="pricing-note">Prezzi indicativi: per ora raccogliamo richieste tramite WhatsApp. Disponibilità, spedizione e costo finale vanno confermati prima di qualsiasi acquisto.</p>
@@ -172,14 +191,14 @@ body{background:linear-gradient(180deg,#fbf7f0 0%,#f8f1e9 40%,#fbf7f0 100%)}
     <section class="story-section" id="artigianale" aria-labelledby="story-title">
       <div class="container story-layout">
         <div class="story-art" aria-hidden="true"><span class="story-overline">DAI POST ALLE COSE VERE</span><div class="story-type">Dicette<br><i>Mammà...</i></div><div class="story-flower">✿</div><div class="story-label">e mo l’abbiamo stampato.</div></div>
-        <div class="story-copy"><span class="section-kicker light">02 / DALLA PAGINA ALLA STAMPA</span><h2 id="story-title">Tutto è iniziato con <em>«Dicette Mammà…»</em></h2><p>Su Instagram condividiamo quelle frasi che leggi e pensi: «Mammà mia dice proprio accussì!». Un post dopo l’altro, tra commenti, condivisioni e risate, ci è venuta un’idea: e se quelle parole diventassero oggetti veri?</p><p>Così è nata la collezione 3D di Dicette Mammà: una calamita da attaccare al frigo, un portachiavi da portare in giro e, per Natale, un cappellino da usare come segnaposto o portachiavi. E la frase la scegli tu.</p><a href="https://www.instagram.com/dicettemamma/" class="button button-cream" target="_blank" rel="noopener noreferrer">Fatti una risata su Instagram <span aria-hidden="true">↗</span></a></div>
+        <div class="story-copy"><span class="section-kicker light">02 / DALLA PAGINA ALLA STAMPA</span><h2 id="story-title">Tutto è iniziato con <em>«Dicette Mammà…»</em></h2><p>Su Instagram condividiamo quelle frasi che leggi e pensi: «Mammà mia dice proprio accussì!». Un post dopo l’altro, tra commenti, condivisioni e risate, ci è venuta un’idea: e se quelle parole diventassero oggetti veri?</p><p>Così è nata la collezione 3D di Dicette Mammà: calamite da attaccare al frigo e portachiavi da portare in giro. E intanto stiamo preparando una sorpresa che sveleremo presto su Instagram!</p><a href="https://www.instagram.com/dicettemamma/" class="button button-cream" target="_blank" rel="noopener noreferrer">Fatti una risata su Instagram <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
     <section class="how-section section container" id="come-funziona" aria-labelledby="how-title">
       <div class="section-head centered"><span class="section-kicker">03 / FACILE FACILE</span><h2 id="how-title">Tu scegli ’a frase. <em>Nuje ’a stampammo.</em></h2><p>Tre passaggi: niente complicazioni, solo la tua frase preferita.</p></div>
       <div class="steps-grid">
-        <article class="step"><div class="step-icon" aria-hidden="true">✶</div><span class="step-no">01</span><h3>Scegli il pezzo</h3><p>Calamita, portachiavi o cappellino 2 in 1: dove la mettiamo questa frase?</p></article>
+        <article class="step"><div class="step-icon" aria-hidden="true">✶</div><span class="step-no">01</span><h3>Scegli il pezzo</h3><p>Calamita o portachiavi: dove la mettiamo questa frase?</p></article>
         <article class="step"><div class="step-icon" aria-hidden="true">✎</div><span class="step-no">02</span><h3>Dicce ’a frase</h3><p>Scrivi la tua perla di Mammà e prova i colori nell’anteprima.</p></article>
         <article class="step"><div class="step-icon" aria-hidden="true">♡</div><span class="step-no">03</span><h3>Mandaci la richiesta</h3><p>Metti tutto nel carrello e invia su WhatsApp. Ti confermiamo dettagli e disponibilità.</p></article>
       </div>
@@ -200,7 +219,6 @@ body{background:linear-gradient(180deg,#fbf7f0 0%,#f8f1e9 40%,#fbf7f0 100%)}
 'use strict';
 
 const PRODUCTS = [
-  {id:'cappellino',category:'SEGNAPOSTO / PORTACHIAVI',tag:'2 usi in 1',title:'Cappellino segnaposto / portachiavi',description:'Un cappellino, due modi di usarlo: segnaposto per la tavola oppure portachiavi da portare sempre con te. Scrivi il nome che vuoi e scegli i colori.',price:3.90,defaultText:"O' PAZZ",maxLength:16,label:'Che ci scriviamo sopra?',placeholder:"Es. O' PAZZ",base:'#d94b4b',ink:'#1e1e1e',image:'cappellino-personalizzato.png',usage:'Segnaposto e/o portachiavi'},
   {id:'calamita',category:'LE FRASI SUL FRIGO',tag:'Nuovo prodotto',title:'Calamita personalizzata',description:'La frase che ti fa ridere su @dicettemamma, adesso sul tuo frigorifero! Scrivi una dedica o una dicetta napoletana e scegli i colori.',price:5.90,defaultText:'Veritavenne bene ca’ se more.',maxLength:42,label:'Quale frase mettiamo sulla calamita?',placeholder:'Es. Veritavenne bene ca’ se more.',base:'#d94b4b',ink:'#d94b4b',image:'calamita-trasparente-v2.png',usage:'Calamita da frigorifero'},
   {id:'portachiavi',category:'NAPOLI DA PORTARE',tag:'Sempre con te',title:'Portachiavi 3D',description:'Le battute che condividi su @dicettemamma ora vengono in tasca con te. Un nome o la tua frase preferita: scegli tu.',price:4.90,defaultText:"NUN SI BUON MANC SOTT'UOGLIO",maxLength:30,label:'Quale frase porti in giro?',placeholder:"Es. Nun si buon manc sott'uoglio",base:'#d94b4b',ink:'#fffaf2',image:'portachiavi-nun-si-buon-manc.png',usage:'Portachiavi personalizzato'}
 ];
@@ -277,7 +295,23 @@ function livePreviewMarkup(product,text,baseColor,inkColor){
 
 function renderCards(){
   byId('heroArt').innerHTML='<img class="hero-magnet-img" src="calamita-trasparente-v2.png" alt="Calamita con frase napoletana">';
-  byId('productsGrid').innerHTML=PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Anteprima di ${safe(product.title)}">${product.image ? `<img class="product-photo-real" src="${safe(product.image)}" alt="${safe(product.title)}" loading="lazy">` : artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>Da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Scegli la frase ↗</button></div></div></article>`).join('');
+  const teaser = `<article class="product-card teaser-card" aria-label="Novità natalizia Dicette Mammà in arrivo">
+    <div class="product-visual teaser-visual">
+      <span class="teaser-top-label">✦ SPECIALE NATALE</span>
+      <div class="teaser-sparkle teaser-sparkle-one" aria-hidden="true">✳</div>
+      <div class="teaser-sparkle teaser-sparkle-two" aria-hidden="true">✦</div>
+      <div class="teaser-sparkle teaser-sparkle-three" aria-hidden="true">✧</div>
+      <div class="teaser-focus"><span class="teaser-pretitle">QUALCOSA DI SPECIALE STA ARRIVANDO</span><strong>STAY<br>TUNED</strong><span class="teaser-bottomline">Dicette Mammà · Coming soon</span></div>
+    </div>
+    <div class="product-body">
+      <span class="product-category">NOVITÀ IN ARRIVO</span>
+      <h3>Nun ve dicimmo niente... ancora!</h3>
+      <p>Stiamo preparando una sorpresa per le feste. Continua a seguirci su Instagram: presto la sveleremo!</p>
+      <div class="product-action-row"><span class="teaser-unavailable" aria-label="Prodotto non ancora disponibile">✦ STAY TUNED</span><span class="teaser-not-for-sale">Non ancora disponibile</span></div>
+    </div>
+  </article>`;
+  const availableCards = PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Anteprima di ${safe(product.title)}">${product.image ? `<img class="product-photo-real" src="${safe(product.image)}" alt="${safe(product.title)}" loading="lazy">` : artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>Da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Scegli la frase ↗</button></div></div></article>`).join('');
+  byId('productsGrid').innerHTML=teaser + availableCards;
   document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openProduct(button.dataset.open)));
 }
 function swatchOptions(group,selected){
@@ -285,7 +319,8 @@ function swatchOptions(group,selected){
  return colors.map((color,index)=>`<label class="swatch-label"><input type="radio" name="${group}" value="${color.hex}" ${color.hex===selected?'checked':''} aria-label="${color.name}"><span class="swatch-dot" style="--swatch:${color.hex}" aria-hidden="true"></span><span>${color.name}</span></label>`).join('');
 }
 function openProduct(id){
-  currentProduct=PRODUCTS.find(p=>p.id===id)||PRODUCTS[0];
+  currentProduct=PRODUCTS.find(p=>p.id===id);
+  if(!currentProduct) return;
   byId('customTitle').textContent=currentProduct.title;
   byId('customDescription').textContent=currentProduct.description;
   byId('customTextLabel').textContent=currentProduct.label;
