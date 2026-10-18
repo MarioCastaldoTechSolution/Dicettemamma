@@ -1,7 +1,7 @@
 'use strict';
 
 const PRODUCTS = [
-  { id:'cappellino', category:'SPECIALE NATALE', tag:'Solo per le feste', title:'Cappellino segnaposto', description:'A Natale c’è un posto per tutti… e Mammà lo decide! Il cappellino con il nome che vuoi, per una tavola piena di risate.', price:5.90, defaultText:'GENNARO', maxLength:20, label:'Come lo chiamiamo?', placeholder:'Es. Gennaro', base:'#b84546', ink:'#21483c' },
+  { id:'cappellino', category:'SEGNAPOSTO O PORTACHIAVI', tag:'2 usi in 1', title:'Cappellino segnaposto / portachiavi', description:'Un cappellino, due modi di usarlo: segnaposto per la tavola oppure portachiavi da portare sempre con te. Personalizza il nome o la scritta e scegli i colori che preferisci.', price:3.90, defaultText:'OTPAZZ', maxLength:16, label:'Che ci scriviamo sopra?', placeholder:'Es. OTPAZZ', base:'#d94b4b', ink:'#1e1e1e', image:'cappellino-personalizzato.png' },
   { id:'quadretto', category:'DAL POST ALLA PARETE', tag:'La frase del cuore', title:'Mini quadretto', description:'Quella frase di Mammà che vorresti incorniciare? Mo se po’! Scegli la scritta e falla diventare il pezzo forte della stanza.', price:7.90, defaultText:'MAMMÀ TENE SEMPE RAGIONE', maxLength:46, label:'Quale frase incorniciamo?', placeholder:'Es. Mammà tene sempe ragione', base:'#c7745c', ink:'#283c57' },
   { id:'portachiavi', category:'NAPOLI DA PORTARE', tag:'Sempre con te', title:'Portachiavi 3D', description:'Le battute che condividi su @dicettemamma ora vengono in tasca con te. Un nome o la tua frase preferita: scegli tu.', price:4.90, defaultText:'NUN ME SCUCCIÀ', maxLength:30, label:'Quale frase porti in giro?', placeholder:'Es. Nun me scuccià', base:'#283c57', ink:'#fff9ee' }
 ];
@@ -15,11 +15,12 @@ const PALETTE = [
 ];
 // Solo il cappellino utilizza la selezione a tema natalizio.
 const CHRISTMAS_PALETTE = [
-  {name:'Rosso Natale',hex:'#b84546'},
-  {name:'Verde bosco',hex:'#21483c'},
-  {name:'Avorio',hex:'#fff9ee'},
-  {name:'Oro sabbia',hex:'#caa366'},
-  {name:'Rosa antico',hex:'#d7928b'}
+  {name:'Rosso',hex:'#d94b4b'},
+  {name:'Bianco',hex:'#fffaf2'},
+  {name:'Azzurro',hex:'#8ec7ff'},
+  {name:'Nero',hex:'#1e1e1e'},
+  {name:'Lilla',hex:'#b79adf'},
+  {name:'Grigio',hex:'#9da3af'}
 ];
 const CONFIG = window.DICETTE_CONFIG || {};
 const money = value => new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'}).format(value);
@@ -68,7 +69,7 @@ function artSvg(type,text,base,ink,mode='card') {
 
 function renderCards(){
   byId('heroArt').innerHTML=artSvg('quadretto','MAMMÀ TENE SEMPE RAGIONE', '#c7745c','#283c57','hero');
-  byId('productsGrid').innerHTML=PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Illustrazione di ${safe(product.title)}">${artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>Da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Scegli la frase ↗</button></div></div></article>`).join('');
+  byId('productsGrid').innerHTML=PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Anteprima di ${safe(product.title)}">${product.image ? `<img class="product-photo-real" src="${safe(product.image)}" alt="${safe(product.title)}" loading="lazy">` : artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>Da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Scegli la frase ↗</button></div></div></article>`).join('');
   document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openProduct(button.dataset.open)));
 }
 function swatchOptions(group,selected){
