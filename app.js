@@ -67,6 +67,14 @@ function artSvg(type,text,base,ink,mode='card') {
   return `<svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" aria-hidden="true">${defs}${bg}${content}</svg>`;
 }
 
+
+function livePreviewMarkup(product,text,baseColor,inkColor){
+  if(product.id==='cappellino' && product.image){
+    return `<div class="real-preview-card"><div class="real-preview-label">Anteprima prodotto</div><img class="real-preview-photo" src="${safe(product.image)}" alt="${safe(product.title)}"><div class="real-preview-summary"><div><strong>Scritta:</strong> ${safe(text.toUpperCase())}</div><div><strong>Colore cappellino:</strong> ${safe(colorName(baseColor))}</div><div><strong>Colore scritta:</strong> ${safe(colorName(inkColor))}</div><div><strong>Uso:</strong> Segnaposto e/o portachiavi</div></div><p>Anteprima illustrativa: la personalizzazione e i colori scelti vengono riportati nella tua richiesta.</p></div></div>`;
+  }
+  return artSvg(product.id,text,baseColor,inkColor);
+}
+
 function renderCards(){
   byId('heroArt').innerHTML=artSvg('quadretto','MAMMÀ TENE SEMPE RAGIONE', '#c7745c','#283c57','hero');
   byId('productsGrid').innerHTML=PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Anteprima di ${safe(product.title)}">${product.image ? `<img class="product-photo-real" src="${safe(product.image)}" alt="${safe(product.title)}" loading="lazy">` : artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>Da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Scegli la frase ↗</button></div></div></article>`).join('');
@@ -97,7 +105,7 @@ function updatePreview(){
   const base=f.elements.base?.value||currentProduct.base;
   const ink=f.elements.ink?.value||currentProduct.ink;
   const text=byId('customText').value||'LA TUA FRASE';
-  byId('customPreview').innerHTML=artSvg(currentProduct.id,text,base,ink);
+  byId('customPreview').innerHTML=livePreviewMarkup(currentProduct,text,base,ink);
   byId('customPrice').textContent=money(currentProduct.price*getQuantity());
   byId('textCounter').textContent=`${byId('customText').value.length}/${currentProduct.maxLength} caratteri · questa è un’anteprima`;
 }
@@ -132,7 +140,7 @@ function updateCart(){
  if(!count){byId('cartContents').innerHTML='<div class="cart-empty"><span aria-hidden="true">♡</span><strong>Qua nun ce sta ancora niente!</strong><p>Scegli una creazione e mettici la tua frase preferita.</p></div>';return;}
  byId('cartContents').innerHTML=cart.map((item,i)=>{
  const product=PRODUCTS.find(p=>p.id===item.id);
- return `<article class="cart-item"><div class="cart-item-art">${artSvg(product.id,item.text,item.base,item.ink)}</div><div><div class="cart-item-name">${safe(product.title)}</div><div class="cart-item-detail">${safe(item.text)}</div><div class="cart-item-detail">Base: ${safe(colorName(item.base))} · Testo: ${safe(colorName(item.ink))}</div>${item.note?`<div class="cart-item-detail">Nota: ${safe(item.note)}</div>`:''}<div class="cart-item-footer"><strong>${money(product.price*item.qty)}</strong><div class="qty-tools"><button type="button" data-index="${i}" data-action="minus" aria-label="Riduci quantità ${safe(product.title)}">−</button><span aria-label="Quantità">${item.qty}</span><button type="button" data-index="${i}" data-action="plus" aria-label="Aumenta quantità ${safe(product.title)}">+</button></div></div><button type="button" class="cart-remove" data-index="${i}" data-action="remove">Rimuovi</button></div></article>`;
+ return `<article class="cart-item"><div class="cart-item-art">${product.image ? `<img class=\"cart-item-photo\" src=\"${safe(product.image)}\" alt=\"${safe(product.title)}\">` : artSvg(product.id,item.text,item.base,item.ink)}</div><div><div class="cart-item-name">${safe(product.title)}</div><div class="cart-item-detail">${safe(item.text)}</div><div class="cart-item-detail">Base: ${safe(colorName(item.base))} · Testo: ${safe(colorName(item.ink))}</div>${item.note?`<div class="cart-item-detail">Nota: ${safe(item.note)}</div>`:''}<div class="cart-item-detail">Uso: Segnaposto e/o portachiavi</div><div class="cart-item-footer"><strong>${money(product.price*item.qty)}</strong><div class="qty-tools"><button type="button" data-index="${i}" data-action="minus" aria-label="Riduci quantità ${safe(product.title)}">−</button><span aria-label="Quantità">${item.qty}</span><button type="button" data-index="${i}" data-action="plus" aria-label="Aumenta quantità ${safe(product.title)}">+</button></div></div><button type="button" class="cart-remove" data-index="${i}" data-action="remove">Rimuovi</button></div></article>`;
  }).join('');
 }
 function colorName(hex){return [...PALETTE,...CHRISTMAS_PALETTE].find(c=>c.hex===hex)?.name||hex;}
