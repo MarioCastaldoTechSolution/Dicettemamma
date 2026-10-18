@@ -1,186 +1,107 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dicette Mammà: oggetti stampati in 3D ispirati a Napoli, personalizzabili e pronti da ordinare via WhatsApp.">
-    <title>Dicette Mammà | Idee regalo napoletane stampate in 3D</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV1SM1ZGT9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('js', new Date());
-      gtag('config', 'G-XV1SM1ZGT9');
-    </script>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Dicette Mammà home">
-        <img class="site-logo header-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#283c57">
+  <meta name="description" content="Dicette Mammà: creazioni 3D personalizzate, frasi napoletane e idee regalo originali per ogni occasione.">
+  <title>Dicette Mammà — Piccole cose, grandi sorrisi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <div class="announcement"><span class="sparkle" aria-hidden="true">✦</span> Parole napoletane, piccoli oggetti, grandi sorrisi <span class="announcement-extra">· Fatto per ogni occasione</span> <span class="sparkle" aria-hidden="true">✦</span></div>
+  <header class="site-header" id="top">
+    <div class="header-inner container">
+      <a href="#top" class="brand" aria-label="Dicette Mammà, torna all'inizio">
+        <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 52 52" width="43" height="43" fill="none"><path d="M26 5c10.9 0 20 9.1 20 20S36.9 45 26 45 6 35.9 6 25 15.1 5 26 5Z" stroke="currentColor" stroke-width="1.4"/><path d="M16 32V18h9c7 0 10 3.1 10 7s-3 7-10 7h-9Z" stroke="currentColor" stroke-width="2.3"/><path d="M11 40c8 6 22 7 30-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M26 1v5M49 25h-5M3 25h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+        <span class="brand-words">Dicette <em>Mammà</em><small>Piccole cose napoletane</small></span>
       </a>
-
-      <button class="nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
-        <span class="sr-only">Apri menu</span>
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav-menu" id="site-menu" aria-label="Menu principale">
-        <a href="index.html#home">Home</a>
-        <a href="portachiavi.html">Prodotti</a>
-        <a href="index.html#come-funziona">Come funziona</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#contatti">Contatti</a>
-        <a class="nav-cta" href="portachiavi.html">Ordina ora</a>
+      <nav class="desktop-nav" aria-label="Navigazione principale">
+        <a href="#collezione">La collezione</a>
+        <a href="#artigianale">La nostra bottega</a>
+        <a href="#come-funziona">Come funziona</a>
+        <a href="#domande">FAQ</a>
       </nav>
-    </header>
-
-    <main>
-      <section class="hero" id="home">
-        <div class="section hero-grid reveal">
-          <div class="hero-copy">
-            <span class="eyebrow">Napoli mood · stampa 3D · personalizzabile</span>
-            <h1>Regali napoletani pieni di carattere, fatti per essere scelti al volo.</h1>
-            <p class="hero-lead">Dicette Mammà trasforma frasi, nomi e idee regalo in piccoli oggetti stampati in 3D: <strong>cappellino segnaposto</strong>, <strong>mini quadretto</strong> e <strong>portachiavi</strong>.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="portachiavi.html">Scopri i prodotti</a>
-              <a class="button button-secondary" href="#come-funziona">Come si ordina</a>
-            </div>
-            <div class="hero-badges">
-              <span>Ordine via WhatsApp</span>
-              <span>Personalizzabile</span>
-              <span>Made in Napoli mood</span>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <article class="hero-card hero-card-main soft-shadow">
-              <span class="card-tag green">Novità</span>
-              <img src="home-portachiavi.png" alt="Portachiavi Dicette Mammà" class="hero-showcase">
-            </article>
-            <article class="hero-card hero-card-small soft-shadow">
-              <img src="assets/cappellino-segnaposto.png" alt="Cappellino segnaposto personalizzabile" class="hero-thumb">
-              <div>
-                <strong>Cappellino segnaposto</strong>
-                <p>Personalizzabile con nome</p>
-              </div>
-            </article>
-            <article class="hero-card hero-card-small soft-shadow">
-              <img src="assets/mini-quadretto.png" alt="Mini quadretto personalizzabile" class="hero-thumb">
-              <div>
-                <strong>Mini quadretto</strong>
-                <p>Frase o nome su richiesta</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal" aria-labelledby="featuredTitle">
-        <div class="section-heading split">
-          <div>
-            <span class="eyebrow">I 3 prodotti da testare</span>
-            <h2 id="featuredTitle">Pochi prodotti, chiari, personalizzabili e facili da ordinare.</h2>
-          </div>
-          <a class="button button-secondary" href="portachiavi.html">Vai al catalogo</a>
-        </div>
-        <div class="featured-grid" id="featuredGrid"></div>
-      </section>
-
-      <section class="section intro-strip reveal" id="come-funziona">
-        <div>
-          <span class="eyebrow">Come funziona</span>
-          <h2>Un sito più semplice, un ordine più intuitivo.</h2>
-        </div>
-        <p>Selezioni il prodotto, inserisci la personalizzazione, scegli colori e quantità, poi ti portiamo su WhatsApp con il messaggio già compilato. Tu confermi solo se ti va bene tutto.</p>
-      </section>
-
-      <section class="section reveal">
-        <div class="step-grid">
-          <article class="step-card">
-            <span class="step-number">01</span>
-            <h3>Scegli il prodotto</h3>
-            <p>Scegli tra cappellino segnaposto, mini quadretto o portachiavi.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">02</span>
-            <h3>Personalizza</h3>
-            <p>Inserisci nome o frase e scegli i colori che preferisci.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">03</span>
-            <h3>Invia richiesta</h3>
-            <p>Su WhatsApp riceviamo i dettagli del tuo ordine e ti rispondiamo rapidamente.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section story reveal" aria-labelledby="storyTitle">
-        <div class="story-card">
-          <span class="eyebrow">La storia</span>
-          <h2 id="storyTitle">Dal profilo Instagram agli oggetti da regalare.</h2>
-          <p>Dicette Mammà nasce dai modi di dire, dalle battute e dalle frasi che fanno sorridere chi ama Napoli. Oggi quelle stesse idee diventano oggetti stampati in 3D, colorati, personalizzabili e perfetti per un regalo originale.</p>
-        </div>
-      </section>
-
-      <section class="section faq reveal" id="faq">
-        <div class="section-heading">
-          <span class="eyebrow">FAQ</span>
-          <h2>Domande frequenti</h2>
-        </div>
-        <div class="faq-list">
-          <details>
-            <summary>Posso personalizzare ogni prodotto?</summary>
-            <p>Sì. Per ogni articolo puoi indicare nome o frase, quantità, note e preferenze colore.</p>
-          </details>
-          <details>
-            <summary>Ordino e pago direttamente dal sito?</summary>
-            <p>Per ora l'ordine viene inviato su WhatsApp già compilato, così puoi confermare tutto prima della produzione.</p>
-          </details>
-          <details>
-            <summary>Quanto tempo serve?</summary>
-            <p>Dipende dal prodotto e dalla quantità. I tempi vengono confermati su WhatsApp prima della conferma finale.</p>
-          </details>
-          <details>
-            <summary>Fate spedizione?</summary>
-            <p>Sì, spedizione o consegna vengono concordate in fase d'ordine.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="section contact-strip reveal" id="contatti">
-        <div>
-          <span class="eyebrow">Contatti</span>
-          <h2>Pronto a testare il tuo primo ordine?</h2>
-          <p>Scrivici su Instagram oppure vai direttamente al catalogo e scegli il prodotto da personalizzare.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="button button-primary" href="portachiavi.html">Vedi i prodotti</a>
-          <a class="button button-secondary" href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <a class="footer-brand" href="index.html" aria-label="Vai alla Home di Dicette Mammà">
-          <img class="site-logo footer-logo" src="logo-dicette-mamma.png" alt="Dicette Mammà">
-        </a>
-        <p class="footer-copy">Oggetti stampati in 3D ispirati a Napoli, personalizzati e pieni di carattere.</p>
+      <div class="header-actions">
+        <button class="cart-button" id="cartOpen" type="button" aria-label="Apri carrello, 0 articoli" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2 11.2a2 2 0 0 0 2 1.8h9a2 2 0 0 0 2-1.6L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span class="cart-label">Il tuo carrello</span><span id="cartCount" class="cart-count">0</span>
+        </button>
+        <button class="menu-button" id="mobileMenuButton" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileNav" type="button"><span></span><span></span><span></span></button>
       </div>
-      <div>
-        <h2>Link rapidi</h2>
-        <a href="portachiavi.html">Prodotti</a>
-        <a href="index.html#come-funziona">Come funziona</a>
-        <a href="index.html#faq">FAQ</a>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" hidden>
+      <a href="#collezione">La collezione</a><a href="#artigianale">La nostra bottega</a><a href="#come-funziona">Come funziona</a><a href="#domande">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="small-eyebrow"><span class="eyebrow-star" aria-hidden="true">✧</span> ISPIRATO A NAPOLI, PENSATO PER TE</div>
+          <h1 id="hero-title">Le parole di casa<br>diventano <em>piccoli tesori.</em></h1>
+          <p>Un nome, una frase che fa sorridere, una dedica speciale. Creazioni in 3D personalizzabili, con tutta la fantasia e il carattere di Napoli.</p>
+          <div class="hero-ctas"><a class="button button-red" href="#collezione">Scopri la collezione <span aria-hidden="true">↗</span></a><a class="text-link" href="#come-funziona">Come funziona <span aria-hidden="true">→</span></a></div>
+          <div class="hero-signature"><div class="avatar-seal" aria-hidden="true">dm</div><span>Creato con cura, <strong>pensato per qualcuno.</strong></span></div>
+        </div>
+        <div class="hero-stage" aria-label="Illustrazioni dei regali Dicette Mammà">
+          <div class="stage-decoration stage-star star-one" aria-hidden="true">✧</div><div class="stage-decoration stage-star star-two" aria-hidden="true">✦</div>
+          <div class="stage-orbit orbit-one" aria-hidden="true"></div><div class="stage-orbit orbit-two" aria-hidden="true"></div>
+          <div class="hero-product" id="heroArt" aria-hidden="true"></div>
+          <div class="hero-note"><span>UN PENSIERO SU MISURA</span><strong>La tua frase, il tuo stile</strong><i aria-hidden="true">✳</i></div>
+          <span class="hero-tag">Idee da regalare <i aria-hidden="true">✦</i></span>
+        </div>
       </div>
-      <div>
-        <h2>Social</h2>
-        <a href="https://www.instagram.com/dicettemamma" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/393793417872" target="_blank" rel="noopener">WhatsApp</a>
+      <div class="hero-bottom-mark" aria-hidden="true">✳</div>
+    </section>
+
+    <section class="promise-strip" aria-label="I nostri punti di forza">
+      <div class="container promise-items">
+        <span><span aria-hidden="true">✳</span> Fatto con stampa 3D</span><span><span aria-hidden="true">✧</span> Personalizzato da te</span><span><span aria-hidden="true">♡</span> Ideale da regalare</span><span><span aria-hidden="true">❋</span> Napoli nel cuore</span>
       </div>
-      <p class="footer-note">Copyright &copy; 2026 Dicette Mammà. Tutti i diritti riservati.</p>
-    </footer>
-  </body>
+    </section>
+
+    <section class="collection section container" id="collezione" aria-labelledby="collection-title">
+      <div class="section-head">
+        <div><span class="section-kicker">01 / LA COLLEZIONE</span><h2 id="collection-title">Un regalo che <em>parla di te.</em></h2></div>
+        <p>Tre creazioni da personalizzare: due da amare tutto l’anno e una piccola novità natalizia.</p>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+      <p class="pricing-note">Prezzi indicativi per il test della collezione. Disponibilità, spedizioni e totale vengono confermati prima di procedere.</p>
+    </section>
+
+    <section class="story-section" id="artigianale" aria-labelledby="story-title">
+      <div class="container story-layout">
+        <div class="story-art" aria-hidden="true"><span class="story-overline">UNA BOTTEGA FATTA DI IDEE</span><div class="story-type">Mammà<br><i>diceva...</i></div><div class="story-flower">✿</div><div class="story-label">e noi l'abbiamo stampato.</div></div>
+        <div class="story-copy"><span class="section-kicker light">02 / LA NOSTRA IDEA</span><h2 id="story-title">Un pezzetto di <em>Napoli,</em> da regalare.</h2><p>Ci piacciono i dettagli, le frasi che conosci da sempre e gli oggetti che hanno una storia. Con la stampa 3D trasformiamo piccole idee in qualcosa che puoi toccare, appendere, regalare.</p><p>Ogni pezzo può portare il tuo nome, una dedica o quella frase che fa sorridere tutta la famiglia.</p><a href="#collezione" class="button button-cream">Trova il tuo regalo <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="how-section section container" id="come-funziona" aria-labelledby="how-title">
+      <div class="section-head centered"><span class="section-kicker">03 / COME FUNZIONA</span><h2 id="how-title">Semplice come dire <em>“ti pensavo”.</em></h2><p>Tre passaggi e la tua idea comincia a prendere forma.</p></div>
+      <div class="steps-grid">
+        <article class="step"><div class="step-icon" aria-hidden="true">✶</div><span class="step-no">01</span><h3>Scegli</h3><p>Esplora la collezione e trova il prodotto che ti piace.</p></article>
+        <article class="step"><div class="step-icon" aria-hidden="true">✎</div><span class="step-no">02</span><h3>Personalizza</h3><p>Scrivi il nome o la frase e prova i colori nell'anteprima.</p></article>
+        <article class="step"><div class="step-icon" aria-hidden="true">♡</div><span class="step-no">03</span><h3>Richiedi</h3><p>Aggiungi al carrello e invia la richiesta su WhatsApp per la conferma.</p></article>
+      </div>
+    </section>
+
+    <section class="gift-banner container" aria-labelledby="gift-title"><div class="gift-burst" aria-hidden="true">✳</div><div><span>IL PENSIERO PIÙ BELLO?</span><h2 id="gift-title">Quello che porta <em>il tuo nome.</em></h2><p>Un dettaglio fatto su misura può diventare il regalo che si ricorda più a lungo.</p></div><a class="button button-red" href="#collezione">Scegli il tuo <span aria-hidden="true">↗</span></a></section>
+
+    <section class="faq section container" id="domande" aria-labelledby="faq-title"><div class="faq-lead"><span class="section-kicker">04 / DOMANDE FREQUENTI</span><h2 id="faq-title">Tutto chiaro, <em>senza sorprese.</em></h2><p>Qualche risposta prima di scegliere il tuo regalo.</p></div><div class="faq-list"><details><summary>Posso scegliere qualsiasi nome o frase?<span aria-hidden="true">+</span></summary><p>Puoi scrivere un nome o una frase breve. Se il testo è troppo lungo per il prodotto ti proponiamo insieme come adattarlo.</p></details><details><summary>Posso selezionare i colori?<span aria-hidden="true">+</span></summary><p>Sì! Nella scheda prodotto puoi provare diverse combinazioni. La disponibilità dei filamenti viene confermata prima della realizzazione.</p></details><details><summary>Sto già effettuando un acquisto e pagando?<span aria-hidden="true">+</span></summary><p>No. Il carrello genera una richiesta su WhatsApp, non un pagamento o un ordine confermato. La richiesta viene valutata e confermata successivamente.</p></details><details><summary>Quanto costa la spedizione?<span aria-hidden="true">+</span></summary><p>Le spese e le modalità di consegna dipendono dalla destinazione e dalla quantità. Riceverai tutti i dettagli prima della conferma.</p></details></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-main"><div><a href="#top" class="footer-brand">Dicette <em>Mammà</em></a><p>Piccole creazioni, grandi sorrisi.<br>Con un po' di Napoli e tanto cuore.</p></div><nav aria-label="Link footer"><strong>Esplora</strong><a href="#collezione">La collezione</a><a href="#come-funziona">Come funziona</a><a href="#domande">FAQ</a></nav><div><strong>Seguici</strong><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/dicettemamma/">Instagram ↗</a><p>Per domande sulla collezione, scrivici su Instagram.</p></div></div><div class="container footer-base"><span>© 2026 Dicette Mammà · Creato con cura.</span><a href="#top">Torna su ↑</a></div></footer>
+
+  <dialog id="customizeDialog" class="custom-dialog" aria-labelledby="customTitle"><div class="dialog-wrap"><button class="dialog-x" type="button" data-close-custom aria-label="Chiudi personalizzazione">×</button><div class="dialog-art-pane"><span class="preview-kicker">ANTEPRIMA DEL TUO REGALO</span><div id="customPreview" class="custom-preview" aria-label="Anteprima illustrativa del prodotto"></div><div class="illustration-disclaimer">Anteprima illustrativa · il pezzo reale può variare leggermente</div></div><div class="dialog-content"><span class="section-kicker">PERSONALIZZA IL TUO REGALO</span><h2 id="customTitle">Personalizza</h2><p class="dialog-description" id="customDescription"></p><form id="customForm"><div class="form-field"><label for="customText" id="customTextLabel">Nome o frase</label><input id="customText" name="customText" type="text" maxlength="32" required autocomplete="off"><small id="textCounter" class="field-helper"></small></div><fieldset class="color-fieldset"><legend>Colore principale</legend><div class="swatch-list" id="baseSwatches"></div></fieldset><fieldset class="color-fieldset"><legend>Colore della scritta</legend><div class="swatch-list" id="inkSwatches"></div></fieldset><div class="form-row"><div class="form-field"><label for="customQuantity">Quantità</label><input id="customQuantity" name="quantity" type="number" min="1" max="50" value="1" inputmode="numeric" required></div><div class="form-field"><label for="customNote">Note (opzionali)</label><input id="customNote" name="note" maxlength="180" placeholder="Una dedica, un dettaglio..."></div></div><div class="custom-submit"><div><small>Prezzo indicativo</small><strong id="customPrice">—</strong></div><button type="submit" class="button button-red">Aggiungi al carrello <span aria-hidden="true">↗</span></button></div></form></div></div></dialog>
+
+  <dialog id="cartDialog" class="cart-dialog" aria-labelledby="cartTitle"><div class="cart-panel"><header class="cart-panel-head"><div><span class="section-kicker">I TUOI PENSIERI</span><h2 id="cartTitle">Il tuo carrello</h2></div><button class="dialog-x" type="button" data-close-cart aria-label="Chiudi carrello">×</button></header><div id="cartContents" class="cart-contents" aria-live="polite"></div><div class="cart-summary"><div class="cart-total"><span>Totale prodotti indicativo</span><strong id="cartTotal">0,00 €</strong></div><p>Qui raccogli i prodotti che ti interessano. La spedizione non è inclusa: su WhatsApp invii soltanto una richiesta, senza pagare e senza confermare l’ordine.</p><button id="sendRequestButton" class="button button-red cart-send" type="button">Invia richiesta su WhatsApp <span aria-hidden="true">↗</span></button><button id="continueShopping" class="subtle-action" type="button">Continua a scegliere</button></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
 </html>
