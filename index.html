@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#283c57">
   <meta name="description" content="Dicette Mammà: le frasi napoletane che ami su Instagram diventano calamite, portachiavi e creazioni 3D personalizzate. Dalla pagina alla tua casa.">
   <title>Dicette Mammà — Le dicette diventano regali</title>
-  <meta name="dicette-build" content="calamita-20261018-v4-integrato">
+  <meta name="dicette-build" content="calamita-20261018-v5-natale">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
@@ -52,6 +52,15 @@ body{background:linear-gradient(180deg,#fbf7f0 0%,#f8f1e9 40%,#fbf7f0 100%)}
 .product-card:nth-child(3) .product-visual{background:#e6e9ee}
 .product-card[data-product="cappellino"] .product-chip{background:#21483c;color:#fff}
 .product-card[data-product="cappellino"] .product-category{color:#ad4646}
+
+.product-card[data-product="cappellino"] .product-visual{background:linear-gradient(180deg,#f8eee7 0%,#f6e5de 52%,#eef4ee 100%);position:relative;overflow:hidden}
+.product-card[data-product="cappellino"] .product-visual::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 18%,rgba(255,255,255,.92) 0 2px,transparent 3px),radial-gradient(circle at 33% 12%,rgba(255,255,255,.85) 0 2px,transparent 3px),radial-gradient(circle at 74% 20%,rgba(255,255,255,.9) 0 2px,transparent 3px),radial-gradient(circle at 85% 12%,rgba(255,255,255,.8) 0 2px,transparent 3px),radial-gradient(circle at 68% 36%,rgba(255,255,255,.45) 0 1px,transparent 2px);pointer-events:none}
+.product-card[data-product="cappellino"] .product-visual::after{content:"✦";position:absolute;right:18px;top:18px;font-size:20px;color:#d2b16f;opacity:.85}
+.product-card[data-product="cappellino"] .product-chip{background:#21483c;color:#fff;box-shadow:0 6px 16px rgba(33,72,60,.18)}
+.product-card[data-product="cappellino"] .product-photo-real{position:relative;z-index:1;transform:rotate(-3deg) scale(1.03);filter:drop-shadow(0 18px 16px rgba(140,32,32,.14))}
+.product-card[data-product="calamita"] .product-visual{background:#f7f0e8}
+.product-card[data-product="calamita"] .product-photo-real{width:100%;height:100%;object-fit:contain;padding:12px;filter:drop-shadow(0 14px 14px rgba(0,0,0,.08))}
+.hero-magnet-img{box-shadow:none}
 .product-card:not([data-product="cappellino"]) .product-chip{background:#fff9ee;color:#283c57}
 .product-open{background:#283c57}
 .product-open:hover{background:#b86351}
@@ -192,7 +201,7 @@ body{background:linear-gradient(180deg,#fbf7f0 0%,#f8f1e9 40%,#fbf7f0 100%)}
 
 const PRODUCTS = [
   {id:'cappellino',category:'SEGNAPOSTO / PORTACHIAVI',tag:'2 usi in 1',title:'Cappellino segnaposto / portachiavi',description:'Un cappellino, due modi di usarlo: segnaposto per la tavola oppure portachiavi da portare sempre con te. Scrivi il nome che vuoi e scegli i colori.',price:3.90,defaultText:"O' PAZZ",maxLength:16,label:'Che ci scriviamo sopra?',placeholder:"Es. O' PAZZ",base:'#d94b4b',ink:'#1e1e1e',image:'cappellino-personalizzato.png',usage:'Segnaposto e/o portachiavi'},
-  {id:'calamita',category:'LE FRASI SUL FRIGO',tag:'Nuovo prodotto',title:'Calamita personalizzata',description:'La frase che ti fa ridere su @dicettemamma, adesso sul tuo frigorifero! Scrivi una dedica o una dicetta napoletana e scegli i colori.',price:5.90,defaultText:'Veritavenne bene ca’ se more.',maxLength:42,label:'Quale frase mettiamo sulla calamita?',placeholder:'Es. Veritavenne bene ca’ se more.',base:'#d94b4b',ink:'#d94b4b',image:'calamita-personalizzata.png',usage:'Calamita da frigorifero'},
+  {id:'calamita',category:'LE FRASI SUL FRIGO',tag:'Nuovo prodotto',title:'Calamita personalizzata',description:'La frase che ti fa ridere su @dicettemamma, adesso sul tuo frigorifero! Scrivi una dedica o una dicetta napoletana e scegli i colori.',price:5.90,defaultText:'Veritavenne bene ca’ se more.',maxLength:42,label:'Quale frase mettiamo sulla calamita?',placeholder:'Es. Veritavenne bene ca’ se more.',base:'#d94b4b',ink:'#d94b4b',image:'calamita-trasparente-v2.png',usage:'Calamita da frigorifero'},
   {id:'portachiavi',category:'NAPOLI DA PORTARE',tag:'Sempre con te',title:'Portachiavi 3D',description:'Le battute che condividi su @dicettemamma ora vengono in tasca con te. Un nome o la tua frase preferita: scegli tu.',price:4.90,defaultText:"NUN SI BUON MANC SOTT'UOGLIO",maxLength:30,label:'Quale frase porti in giro?',placeholder:"Es. Nun si buon manc sott'uoglio",base:'#d94b4b',ink:'#fffaf2',image:'portachiavi-nun-si-buon-manc.png',usage:'Portachiavi personalizzato'}
 ];
 // Palette del marchio neutra e utilizzabile tutto l'anno.
@@ -267,7 +276,7 @@ function livePreviewMarkup(product,text,baseColor,inkColor){
 }
 
 function renderCards(){
-  byId('heroArt').innerHTML='<img class="hero-magnet-img" src="calamita-personalizzata.png" alt="Calamita con frase napoletana">';
+  byId('heroArt').innerHTML='<img class="hero-magnet-img" src="calamita-trasparente-v2.png" alt="Calamita con frase napoletana">';
   byId('productsGrid').innerHTML=PRODUCTS.map(product=>`<article class="product-card" data-product="${product.id}"><div class="product-visual" role="img" aria-label="Anteprima di ${safe(product.title)}">${product.image ? `<img class="product-photo-real" src="${safe(product.image)}" alt="${safe(product.title)}" loading="lazy">` : artSvg(product.id,product.defaultText,product.base,product.ink)}<span class="product-chip">${safe(product.tag)}</span></div><div class="product-body"><span class="product-category">${safe(product.category)}</span><h3>${safe(product.title)}</h3><p>${safe(product.description)}</p><div class="product-action-row"><div class="product-price"><small>Da</small>${money(product.price)}</div><button class="product-open" type="button" data-open="${product.id}" aria-label="Personalizza ${safe(product.title)}">Scegli la frase ↗</button></div></div></article>`).join('');
   document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>openProduct(button.dataset.open)));
 }
