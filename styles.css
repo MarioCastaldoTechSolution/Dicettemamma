@@ -49,3 +49,14 @@ body{background:linear-gradient(180deg,#fbf7f0 0%,#f8f1e9 40%,#fbf7f0 100%)}
 .dialog-art-pane{background:#efe6dc}
 .brand-words em,.footer-brand em{color:#c27a5f}
 @media (max-width:639px){.hero-stage{background:radial-gradient(circle at 48% 34%,#52728b,#283c57 70%)}}
+
+/* Logo ufficiale Dicette Mammà */
+.site-header .header-inner{height:102px}
+.brand-logo{display:block;width:98px;height:98px;object-fit:contain;flex-shrink:0}
+.footer-brand{display:inline-flex;align-items:center;width:max-content;padding:6px;border-radius:13px;background:#faefdb}
+.footer-logo{display:block;width:126px;height:126px;object-fit:contain;border-radius:10px}
+@media(max-width:639px){
+ .site-header .header-inner{height:78px}
+ .brand-logo{width:75px;height:75px}
+ .footer-logo{width:112px;height:112px}
+}

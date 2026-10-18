@@ -1,31 +1,21 @@
-DICETTE MAMMÀ — CODICE COMPLETO PER GITHUB PAGES
+DICETTE MAMMÀ - AGGIORNAMENTO CON LOGO ORIGINALE
 
-STRUTTURA
-- index.html        homepage e catalogo completo, 3 prodotti
-- styles.css        grafica e layout responsive
-- app.js            SVG dei prodotti, finestra personalizzazione, carrello, WhatsApp
-- config.js         numero WhatsApp e ID Analytics (opzionale)
-- CNAME             dominio personalizzato esistente
+Pacchetto per GitHub Pages, con logo caricato dall'utente.
 
-INSTALLAZIONE SU GITHUB PAGES
-1. Salva una copia del repository attuale prima di modificare i file.
-2. Nel repository GitHub, sostituisci index.html e carica styles.css, app.js, config.js e CNAME nella cartella principale (root).
-3. Se usi il metodo GitHub 'Add file > Upload files', trascina i file, non lo ZIP. Alla fine effettua Commit changes.
-4. Non cambiare il file CNAME né i DNS se vuoi conservare www.dicettemamma.shop.
-5. Apri il sito con Ctrl+F5, poi verifica da smartphone prodotti, personalizzazioni, carrello e invio WhatsApp.
+VERSIONE IN PIÙ FILE:
+Carica i file nella radice del repository:
+- index.html
+- styles.css
+- app.js
+- config.js
+- logo-dicette-mamma.jpg (OBBLIGATORIO per mostrare il logo)
+- CNAME (mantiene il dominio)
 
-ALTERNATIVA: UN SOLO FILE
-Scarica Dicette_Mamma_INDEX_Tutto_In_Uno.html e rinominalo esattamente index.html.
-In questo caso i file CSS e JS separati NON sono richiesti. Mantieni invece il CNAME.
+VERSIONE UN SOLO FILE:
+Usa il contenuto del file Dicette_Mamma_Con_Logo_Tutto_In_Uno.html come index.html.
+Il logo è incorporato direttamente in HTML; mantieni il tuo CNAME originale.
 
-PERSONALIZZAZIONI
-- config.js: verifica whatsappNumber; ga4MeasurementId è vuoto per impostazione iniziale.
-- app.js: modifica PRODUCTS per prezzi, descrizioni e nomi dei prodotti.
-- Lo stesso numero WhatsApp è incorporato nell'alternativa tutto-in-uno.
-- Google Fonts usa un collegamento esterno: offline si usano i font di riserva.
-
-COME FUNZIONA IL CARRELLO
-Le scelte vengono conservate nel browser tramite localStorage.
-Invia richiesta su WhatsApp apre un messaggio precompilato. Nessun pagamento, nessuna gestione server degli ordini; la richiesta arriva soltanto se il cliente preme Invia su WhatsApp.
-I prezzi sono indicativi; spedizione non compresa. Le immagini dei prodotti sono mockup vettoriali indicativi, non fotografie reali.
-Verifica gli adempimenti fiscali/commerciali e privacy prima di avviare vendite effettive.
+Il logo compare nell'intestazione, nel piè di pagina e come favicon.
+La personalizzazione e il carrello con invio WhatsApp restano invariati.
+Verifica in config.js il numero WhatsApp e aggiorna con Ctrl+F5 dopo la pubblicazione.
+Il sito NON riceve pagamenti e non archivia ordini sul server.
